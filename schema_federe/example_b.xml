@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet href="merge.xsl" type="text/xsl"?>
+<merge xmlns="http://informatik.hu-berlin.de/merge">
+      <file1>file1_b.xml</file1>
+      <file2>file2_b.xml</file2>
+</merge>
