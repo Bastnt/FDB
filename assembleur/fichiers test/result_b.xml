@@ -1,0 +1,25 @@
+<CATALOG>
+	<CD>
+		<TITLE>Sylvias Mother</TITLE>
+		<ARTIST>Dr.Hook</ARTIST>
+		<COUNTRY bd="1">UK</COUNTRY>
+		<COMPANY bd="1">CBS</COMPANY>
+		<COUNTRY bd="2">UK</COUNTRY>
+		<PRICE bd="2">8.10</PRICE>
+		<YEAR>1973</YEAR>
+	</CD>
+	<CD id="2">
+		<TITLE>Mi Perra Preferida</TITLE>
+		<ARTIST>Daddy Yankee</ARTIST>
+		<COUNTRY>USAMEX</COUNTRY>
+		<COMPANY>SONY</COMPANY>
+		<YEAR>2003</YEAR>
+	</CD>
+<CD id="3">
+		<TITLE>Mi Perra Preferidaa</TITLE>
+		<ARTIST>Daddy Yankeea</ARTIST>
+		<COUNTRY>USAMEXa</COUNTRY>
+		<COMPANY>SONYa</COMPANY>
+		<YEAR>2004</YEAR>
+	</CD>
+</CATALOG>

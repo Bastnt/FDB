@@ -1,13 +1,5 @@
 <CATALOG>
-	<CD id="1">
-		<TITLE>Sylvias Mother</TITLE>
-		<ARTIST>Dr.Hook</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>CBS</COMPANY>
-		<PRICE>8.10</PRICE>
-		<YEAR>1973</YEAR>
-	</CD>
-<CD id="2">
+	<CD>
 		<TITLE>Empire Burlesque</TITLE>
 		<ARTIST>Bob Dylan</ARTIST>
 		<COUNTRY>USA</COUNTRY>

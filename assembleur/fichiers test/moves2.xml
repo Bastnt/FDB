@@ -1,0 +1,17 @@
+<moves>
+	<move id="0">
+		<name>Absorb</name>
+		<type>Grass</type>
+	</move>
+
+	<move id="1">
+		<name>Acid</name>
+		<type>Poison</type>
+		<spePhySta>Special</spePhySta>
+		<power>40</power>
+		<accuracy>100</accuracy>
+		<caca>caca</caca>
+		<pp>30</pp>
+		<description>May lower opponent's Special Defense.</description>
+	</move>
+</moves>

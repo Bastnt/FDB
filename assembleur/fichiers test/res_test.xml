@@ -1,0 +1,9 @@
+<CATALOG>
+	<CD db="1">
+		<TITLE db="1">Mi Perra Preferida</TITLE>
+		<ARTIST db="1">Daddy Yankee</ARTIST>
+		<COUNTRY delete="non" db="1">USAMEX</COUNTRY>
+		<COMPANY db="1">SONY</COMPANY>
+		<YEAR db="1">2003</YEAR>
+	</CD>
+</CATALOG>

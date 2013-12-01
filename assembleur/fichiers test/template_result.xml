@@ -1,0 +1,4 @@
+<?xml-stylesheet href="merge.xsl" type="text/xsl"?><merge xmlns="http://informatik.hu-berlin.de/merge">
+      <file1>file1_bis.xml</file1>
+      <file2>file2_bis.xml</file2>
+</merge>

@@ -1,0 +1,30 @@
+<moves>
+	<move id="0">
+		<spePhySta>Special</spePhySta>
+		<power>20</power>
+		<accuracy>100</accuracy>
+		<pp>25</pp>
+		<description>User recovers half the HP inflicted on opponent.</description>
+	<name>Absorb</name>
+		<type>Grass</type>
+	</move>
+
+	<move id="1">
+		<name>Acid</name>
+		<type>Poison</type>
+		<spePhySta>Special</spePhySta>
+		<power>40</power>
+		<accuracy>100</accuracy>
+		<caca>caca</caca>
+		<pp>30</pp>
+		<description>May lower opponent's Special Defense.</description>
+	</move>
+
+	<move id="2">
+		<name>Acid Armor</name>
+		<type>Poison</type>
+		<spePhySta>Status</spePhySta>
+		<pp>20</pp>
+		<description>Sharply raises user's Defense.</description>
+	</move>
+</moves>
