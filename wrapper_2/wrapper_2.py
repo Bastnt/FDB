@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # PROJET BDA SIM
 # Dans ce fichier sera codé le wrapper 2 :
 # il sera l'interface entre les sous-requêtes XQuery
@@ -5,4 +7,3 @@
 # Il doit transmettre les requêtes XQuery, puis renvoyer
 # le résultat XML à l'assembleur.
 
-# -*- coding: utf-8 -*-
