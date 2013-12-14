@@ -96,14 +96,72 @@ def fromXQueryPartsToSQL(selectPart, fromPart, wherePart):
 	return "SELECT "+selectedColumn+" FROM "+table_name" WHERE "+whereClauses+";";
 
 # Performs the SQL request on the database
-def getSQLResult(sqlQuery):
+def getSQLResult(sqlQuery, db_path):
 	#TODO
+	# Create HTML result in SQLite :
+	#	.mode html
+	#	.output output.html
+	#	<request>
+	#
+	# Request will be output to html directly
+	#
+	# OUTPUT AS HTML NOT WORKING YET
+
+	con = None
+
+	try:
+	    con = lite.connect(db_path)
+	    print('Successfully connected to \"%s\"' % db_path)
+
+	    cur = con.cursor()
+
+	    #TODO
+	    #output as HTML
+	    print('executing \"%s\"' % sqlQuery)
+	    cur.execute(sqlQuery)
+	    
+	    data = cur.fetchall()
+	    
+	    print("RESULT: ", data)            
+	    
+	except lite.Error as e:
+	    
+	    print("Error %s" % e.args[0])
+	    sys.exit(1)
+	    
+	finally:
+	    
+	    if con:
+	        con.close()
+
 	return;
 
 # Transforms the SQL answer into a XML string to be sent to the mediator
-def fromSQLAnswerToXML(sqlAnswer):
+def fromSQLAnswerToXML(answer_path, att_list):
 	#TODO
-	return;
+	htmlAnswer = open(answer_path, 'r')
+	tree = ET.parse(htmlAnswer)
+	xmlAnswer = '<objects>' + '\n'
+
+	root = tree.getroot()
+	children = list(root)
+	print('root: ', root.tag)
+	
+	# Ok, les \n c'est trop moche, mais pas le temps hein !
+
+	for child in children:
+		xmlAnswer += '<pokemon>' + '\n'
+		values = list(child)
+		for i in range(0, len(att_list)):
+			print('att, val : ', att_list[i], values[i].text)
+			xmlAnswer += '<' + att_list[i] + '>' + '\n'
+			xmlAnswer += values[i].text
+			xmlAnswer += '</' + att_list[i] + '>' + '\n'
+		xmlAnswer += '</pokemon>' + '\n'
+	xmlAnswer += '</objects>'
+
+	print(xmlAnswer)
+	return xmlAnswer;
 
 # Performs the main job
 def fromXQueryRequestToXMLResult(xqueryRequest):
