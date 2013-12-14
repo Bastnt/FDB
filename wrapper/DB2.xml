@@ -1,0 +1,37 @@
+<teams>
+	<team id="1">
+		<pokemon number="1">
+			<move id="1" />
+			<move id="3" />
+			<move id="4" />
+			<move id="5" />
+		</pokemon>
+		<pokemon number="151">
+			<move id="7" />
+			<move id="3" />
+			<move id="8" />
+			<move id="5" />
+		</pokemon>
+	</team>
+	<team id="2">
+		<pokemon number="25">
+			<nickname>
+				Pikapika
+			</nickname>
+			<move id="6" />
+			<move id="7" />
+			<move id="8" />
+			<move id="9" />
+		</pokemon>
+		<pokemon number="158">
+			<nickname>
+				Aligator
+			</nickname>
+			<move id="99" />
+			<move id="11" />
+			<move id="15" />
+			<move id="33" />
+		</pokemon>
+	</team>
+</teams>
+		
