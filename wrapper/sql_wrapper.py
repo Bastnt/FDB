@@ -8,6 +8,15 @@
 # résultat en XML avant de le renvoyer à l'assembleur.
 import re
 
+# Database
+db_path = "../data/sql/database.db"
+# To update the database.db : go to ../data/sql/, suppress the previous database.db, open a shell and then type :
+# sqlite3 database.db
+# .read request_pokemon.sql 
+# (and wait)
+# .read request_team.sql
+# (and wait)
+
 # Converts the python request into a valid SQL request
 def fromPythonReqToSQL(request):
 	# Selected columns from the table
@@ -53,11 +62,7 @@ def getSQLResult(sqlQuery, db_path):
 	return data;
 
 # Transforms the SQL answer into a XML string to be sent to the mediator
-def fromSQLAnswerToXML(answer, att_list, output_path):
-	# Open XML output file
-	# --------------------------------------------------------	
-	result = open(output_path, "w")
-
+def fromSQLAnswerToXML(answer, att_list):
 	# Create XML result tree
 	# --------------------------------------------------------
 	root = ET.Element("pokemons")
@@ -72,37 +77,19 @@ def fromSQLAnswerToXML(answer, att_list, output_path):
 	# --------------------------------------------------------
 	string = ET.tostring(root)
 	string = str(string, "utf-8")
-	result.write(string)
-
-	# Close XML output file
-	# --------------------------------------------------------
-	result.close()
+	return string
 
 # Performs the main job
-def fromXQueryRequestToXMLResult(request):
+def execute(request):
+	global db_path
 	sqlQuery = fromPythonReqToSQL(request)
-	sqlAnswer = getSQLResult(sqlQuery)
-	fromSQLAnswerToXML(sqlAnswer)
+	sqlAnswer = getSQLResult(sqlQuery, db_path)
+	return fromSQLAnswerToXML(sqlAnswer, request.projection)
 
-def main():	
-	#request = Req(["id", "nickname", "type1"], 'type2 = "fire"', "pokemon")
-	#sqlQuery = fromPythonReqToSQL(request)
-	#print(sqlQuery)
-	return;
+# Testing main (can be deleted in the "release" version)
+# def main():	
+# 	print(fromXQueryRequestToXMLResult(req))
+# 	return;
 
-	print("-----------tests getSQLResult and fromSQLAnswerToXML-----------")
-
-	#answer_path = '/home/richard/Downloads/test.html'
-	#list = ['id', 'name']
-	#fromSQLAnswerToXML(answer_path, list)
-
-	#db_path = 'SQL DB/temp.db'
-	#sqlQuery = 'SELECT * FROM pokemon WHERE id=1'
-	#answer = getSQLResult(sqlQuery, db_path)
-	#att_list = ['id', 'name']
-	#output_path = 'result.xml'
-
-	#fromSQLAnswerToXML(answer, att_list, output_path)
-
-if(__name__=="__main__"):
-	main()
+# if(__name__=="__main__"):
+# 	main()
