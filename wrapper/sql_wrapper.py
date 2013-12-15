@@ -79,17 +79,18 @@ def fromSQLAnswerToXML(answer, att_list):
 	string = str(string, "utf-8")
 	return string
 
-# Performs the main job
 def execute(request):
 	global db_path
 	sqlQuery = fromPythonReqToSQL(request)
 	sqlAnswer = getSQLResult(sqlQuery, db_path)
-	return fromSQLAnswerToXML(sqlAnswer, request.projection)
+	print("What to execute: ")
+	print("SELECT {} FROM {} WHERE {}".format(", ".join(request.projection), request.table, request.selection))
+	fromRequestToXMLResult(request)
 
 # Testing main (can be deleted in the "release" version)
-# def main():	
-# 	print(fromXQueryRequestToXMLResult(req))
-# 	return;
+def main():	
+	#print(execute(req))
+	return;
 
-# if(__name__=="__main__"):
-# 	main()
+if(__name__=="__main__"):
+	main()
