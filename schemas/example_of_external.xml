@@ -1,0 +1,54 @@
+<?xml?>
+<pokemonData>
+
+	<teams>
+
+		<team>
+
+			<name>DD</name>
+			<trainers>
+				<trainerName>Dudule</trainerName>
+			</trainers>
+
+			<pokemonList>
+				<pokemon>
+					<nickname>dudulon</nickname>
+					<name>lekmqlf</name>
+					<type1>rock</type1>
+					<moves>
+						<move>
+							<name>plancking</name>
+							<type>rock</type>
+						</move>
+					</moves>
+				</pokemon>
+			</pokemonList>
+
+		</team>
+
+	</teams>
+
+	<pokedex>
+
+		<bestiary>
+			<pokemon>
+				<name>hmEFHZhfJ</name>
+				<number>1</number>
+			</pokemon>
+		</bestiary>
+
+		<moves>
+			<move>
+				<name>klqfdmlmql</name>
+				<spePhySta>qkmjfd</spePhySta>
+				<power>over 9000</power>
+				<accuracy> 20 </accuracy>
+				<pp> 20 </pp>
+				<description>PAEJFOIZJOIUhZEOFHO</description>
+			</move>
+		</moves>
+
+	</pokedex>
+
+</pokemonData>
+
