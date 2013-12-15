@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
-from models.schema_federe import *
+from models import *
 
 # PROJET BDA SIM
 # Dans ce fichier sera codé le diviseur :
@@ -8,17 +8,11 @@ from models.schema_federe import *
 # en différentes sous-requêtes, avant d'interroger les bases
 # via les wrappers
 
-def main(): 
-	my_schema = Schema()
-
-	client_example_request = """
-		for $a in doc()//age
-		where $a/../@id > 1
-		return $a
-	"""
+def main(request): 
+	my_schema = schema()
 
 	print("The request to split: ")
-	print(client_example_request)
+	print(request)
 
 	# === Example non automated: ===
 	ages = my_schema.find_all("age")
@@ -34,8 +28,8 @@ def main():
 			print("-", wrapper.name)
 
 	# They are on the same database, so the request will be:
-	request = Req(["age"], "id > 1")
-	ages[0].wrappers[0].execute(request)
+	req = Req(["age"], "id > 1", "pokemon.db")
+	ages[0].wrappers[0].execute(req)
 
 if __name__ == "__main__":
 	main()

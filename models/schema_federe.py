@@ -7,7 +7,6 @@
 # du client.
 
 from models.tree import *
-from wrapper.wrapper import Wrapper
 
 # Request language
 class Req:
@@ -15,10 +14,21 @@ class Req:
 		self.projection = projection
 		self.selection = selection
 
+class Wrapper:
+	def __init__(self, name):
+		self.name = name
+
+	def execute(self, req):
+		print("\nWhat {} executes: ".format(self.name))
+		print("SELECT ", end="")
+		for p in req.projection:
+			print(p, end=", ")
+		print(" WHERE "+req.selection)
+
 sql_wrapper = Wrapper("SQL")
 xml_wrapper = Wrapper("XML")
 
-def Schema():
+def get():
 	# === XML example verified by this schema: ===
 	# <Node:root>
 	# 	<Node:team Leaf:id="1">
