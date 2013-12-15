@@ -80,11 +80,10 @@ def fromSQLAnswerToXML(answer, att_list):
 	return string
 
 def execute(request):
-	global db_path
-	sqlQuery = fromPythonReqToSQL(request)
-	sqlAnswer = getSQLResult(sqlQuery, db_path)
 	print("What to execute: ")
 	print("SELECT {} FROM {} WHERE {}".format(", ".join(request.projection), request.table, request.selection))
+	sqlQuery = fromPythonReqToSQL(request)
+	sqlAnswer = getSQLResult(sqlQuery, db_path)
 	fromRequestToXMLResult(request)
 
 # Testing main (can be deleted in the "release" version)

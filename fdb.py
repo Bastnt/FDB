@@ -1,12 +1,18 @@
 # -*- coding: utf-8 -*-
 import mediator.splitter
+from wrapper import xml_wrapper
+from models import Req
 
 # This is the top
 def execute(request):
 	# TODO
 	#if(not mediator.verifier.verify(request)):
 	#	return "Invalid Syntax"
+
 	mediator.splitter.main(request)
+
+	# Tests
+	#print(xml_wrapper.execute(Req(['name'], "", "moves.xml")))
 
 if __name__ == "__main__":
 	execute("""

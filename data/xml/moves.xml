@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <moves>
 <move id="0">	<name>Absorb</name>
 	<type>Grass</type>
@@ -7,7 +8,7 @@
 	<pp>25</pp>
 	<description>User recovers half the HP inflicted on opponent.</description>
 </move>
-
+ 
 <move id="1">	<name>Acid</name>
 	<type>Poison</type>
 	<spePhySta>Special</spePhySta>
@@ -272,7 +273,7 @@
 	<type>Normal</type>
 	<spePhySta>Status</spePhySta>
 	<pp>40</pp>
-	<description>User switches out and gives stat changes to the incoming Pokémon.</description>
+	<description>User switches out and gives stat changes to the incoming PokÃ©mon.</description>
 </move>
 
 <move id="34">	<name>Beat Up</name>
@@ -280,7 +281,7 @@
 	<spePhySta>Physical</spePhySta>
 	<accuracy>100</accuracy>
 	<pp>30</pp>
-	<description>Each Pokémon in your party attacks.</description>
+	<description>Each PokÃ©mon in your party attacks.</description>
 </move>
 
 <move id="35">	<name>Belch</name>
@@ -425,7 +426,7 @@
 	<power>140</power>
 	<accuracy>100</accuracy>
 	<pp>10</pp>
-	<description>Hits all adjacent Pokémon.</description>
+	<description>Hits all adjacent PokÃ©mon.</description>
 </move>
 
 <move id="52">	<name>Bounce</name>
@@ -604,7 +605,7 @@
 	<power>60</power>
 	<accuracy>90</accuracy>
 	<pp>10</pp>
-	<description>In battles, the opponent switches. In the wild, the Pokémon runs.</description>
+	<description>In battles, the opponent switches. In the wild, the PokÃ©mon runs.</description>
 </move>
 
 <move id="73">	<name>Clamp</name>
@@ -755,7 +756,7 @@
 	<type>Fairy</type>
 	<spePhySta>Status</spePhySta>
 	<pp>10</pp>
-	<description>Protects the Pokémon from status moves.</description>
+	<description>Protects the PokÃ©mon from status moves.</description>
 </move>
 
 <move id="92">	<name>Cross Chop</name>
@@ -1037,7 +1038,7 @@
 	<power>60</power>
 	<accuracy>90</accuracy>
 	<pp>10</pp>
-	<description>In battles, the opponent switches. In the wild, the Pokémon runs.</description>
+	<description>In battles, the opponent switches. In the wild, the PokÃ©mon runs.</description>
 </move>
 
 <move id="126">	<name>DragonBreath</name>
@@ -1158,7 +1159,7 @@
 	<type>Electric</type>
 	<spePhySta>Status</spePhySta>
 	<pp>10</pp>
-	<description>Prevents all Pokémon from falling asleep for 5 turns.</description>
+	<description>Prevents all PokÃ©mon from falling asleep for 5 turns.</description>
 </move>
 
 <move id="140">	<name>Electrify</name>
@@ -1445,7 +1446,7 @@
 	<power>70</power>
 	<accuracy>100</accuracy>
 	<pp>15</pp>
-	<description>May also injure nearby Pokémon.</description>
+	<description>May also injure nearby PokÃ©mon.</description>
 </move>
 
 <move id="174">	<name>Flame Charge</name>
@@ -1521,7 +1522,7 @@
 	<type>Fairy</type>
 	<spePhySta>Status</spePhySta>
 	<pp>10</pp>
-	<description>Sharply raises Defense of all Grass-type Pokémon on the field.</description>
+	<description>Sharply raises Defense of all Grass-type PokÃ©mon on the field.</description>
 </move>
 
 <move id="183">	<name>Fly</name>
@@ -1793,7 +1794,7 @@
 	<type>Grass</type>
 	<spePhySta>Status</spePhySta>
 	<pp>10</pp>
-	<description>Restores a little HP of all Pokémon for 5 turns. </description>
+	<description>Restores a little HP of all PokÃ©mon for 5 turns. </description>
 </move>
 
 <move id="215">	<name>Gravity</name>
@@ -1861,7 +1862,7 @@
 	<power>40</power>
 	<accuracy>100</accuracy>
 	<pp>35</pp>
-	<description>Hits Pokémon using Fly/Bounce with double power.</description>
+	<description>Hits PokÃ©mon using Fly/Bounce with double power.</description>
 </move>
 
 <move id="224">	<name>Gyro Ball</name>
@@ -1961,7 +1962,7 @@
 	<type>Psychic</type>
 	<spePhySta>Status</spePhySta>
 	<pp>10</pp>
-	<description>The user faints and the next Pokémon released is fully healed.</description>
+	<description>The user faints and the next PokÃ©mon released is fully healed.</description>
 </move>
 
 <move id="237">	<name>Heart Stamp</name>
@@ -2479,7 +2480,7 @@
 	<type>Psychic</type>
 	<spePhySta>Status</spePhySta>
 	<pp>10</pp>
-	<description>The user faints but the next Pokémon released is fully healed.</description>
+	<description>The user faints but the next PokÃ©mon released is fully healed.</description>
 </move>
 
 <move id="299">	<name>Luster Purge</name>
@@ -2550,7 +2551,7 @@
 	<type>Electric</type>
 	<spePhySta>Status</spePhySta>
 	<pp>20</pp>
-	<description>Raises Defense and Sp. Defense of Plus/Minus Pokémon.</description>
+	<description>Raises Defense and Sp. Defense of Plus/Minus PokÃ©mon.</description>
 </move>
 
 <move id="308">	<name>Magnitude</name>
@@ -2572,7 +2573,7 @@
 	<type>Normal</type>
 	<spePhySta>Status</spePhySta>
 	<pp>20</pp>
-	<description>User copies the opponent's attack with 1.5× power.</description>
+	<description>User copies the opponent's attack with 1.5Ã— power.</description>
 </move>
 
 <move id="311">	<name>Mean Look</name>
@@ -3016,7 +3017,7 @@
 	<type>Normal</type>
 	<spePhySta>Status</spePhySta>
 	<pp>5</pp>
-	<description>Any Pokémon in play when this attack is used faints in 3 turns.</description>
+	<description>Any PokÃ©mon in play when this attack is used faints in 3 turns.</description>
 </move>
 
 <move id="366">	<name>Petal Blizzard</name>
@@ -3025,7 +3026,7 @@
 	<power>90</power>
 	<accuracy>100</accuracy>
 	<pp>15</pp>
-	<description>Hits all adjacent Pokémon.</description>
+	<description>Hits all adjacent PokÃ©mon.</description>
 </move>
 
 <move id="367">	<name>Petal Dance</name>
@@ -3145,7 +3146,7 @@
 	<spePhySta>Status</spePhySta>
 	<accuracy>100</accuracy>
 	<pp>20</pp>
-	<description>Damages Pokémon using Fire type moves.</description>
+	<description>Damages PokÃ©mon using Fire type moves.</description>
 </move>
 
 <move id="381">	<name>Powder Snow</name>
@@ -3491,7 +3492,7 @@
 	<type>Normal</type>
 	<spePhySta>Status</spePhySta>
 	<pp>20</pp>
-	<description>In battles, the opponent switches. In the wild, the Pokémon runs.</description>
+	<description>In battles, the opponent switches. In the wild, the PokÃ©mon runs.</description>
 </move>
 
 <move id="424">	<name>Roar of Time</name>
@@ -3999,7 +4000,7 @@
 	<power>50</power>
 	<accuracy>100</accuracy>
 	<pp>15</pp>
-	<description>Makes Flying-type Pokémon vulnerable to Ground moves.</description>
+	<description>Makes Flying-type PokÃ©mon vulnerable to Ground moves.</description>
 </move>
 
 <move id="485">	<name>SmellingSalt</name>
@@ -4344,7 +4345,7 @@
 	<power>90</power>
 	<accuracy>100</accuracy>
 	<pp>15</pp>
-	<description>Hits all adjacent Pokémon.</description>
+	<description>Hits all adjacent PokÃ©mon.</description>
 </move>
 
 <move id="527">	<name>Swagger</name>
@@ -4406,7 +4407,7 @@
 	<power>120</power>
 	<accuracy>100</accuracy>
 	<pp>15</pp>
-	<description>Hits any Pokémon that shares a type with the user.</description>
+	<description>Hits any PokÃ©mon that shares a type with the user.</description>
 </move>
 
 <move id="535">	<name>Synthesis</name>
@@ -4486,7 +4487,7 @@
 	<spePhySta>Status</spePhySta>
 	<accuracy>100</accuracy>
 	<pp>20</pp>
-	<description>Confuses all Pokémon.</description>
+	<description>Confuses all PokÃ©mon.</description>
 </move>
 
 <move id="545">	<name>Telekinesis</name>
@@ -4641,7 +4642,7 @@
 	<type>Psychic</type>
 	<spePhySta>Status</spePhySta>
 	<pp>5</pp>
-	<description>Slower Pokémon move first in the turn for 5 turns.</description>
+	<description>Slower PokÃ©mon move first in the turn for 5 turns.</description>
 </move>
 
 <move id="564">	<name>Trick-or-Treat</name>
@@ -4683,7 +4684,7 @@
 	<power>40</power>
 	<accuracy>100</accuracy>
 	<pp>20</pp>
-	<description>May cause flinching. Hits Pokémon using Fly/Bounce with double power.</description>
+	<description>May cause flinching. Hits PokÃ©mon using Fly/Bounce with double power.</description>
 </move>
 
 <move id="569">	<name>U-turn</name>
@@ -4872,7 +4873,7 @@
 	<type>Normal</type>
 	<spePhySta>Status</spePhySta>
 	<pp>20</pp>
-	<description>In battles, the opponent switches. In the wild, the Pokémon runs.</description>
+	<description>In battles, the opponent switches. In the wild, the PokÃ©mon runs.</description>
 </move>
 
 <move id="591">	<name>Wide Guard</name>
@@ -4925,7 +4926,7 @@
 	<type>Psychic</type>
 	<spePhySta>Status</spePhySta>
 	<pp>10</pp>
-	<description>Swaps every Pokémon's Defense and Special Defense for 5 turns.</description>
+	<description>Swaps every PokÃ©mon's Defense and Special Defense for 5 turns.</description>
 </move>
 
 <move id="598">	<name>Wood Hammer</name>
