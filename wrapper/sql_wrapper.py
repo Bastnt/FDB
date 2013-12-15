@@ -97,32 +97,24 @@ def fromXQueryPartsToSQL(selectPart, fromPart, wherePart):
 
 # Performs the SQL request on the database
 def getSQLResult(sqlQuery, db_path):
-	#TODO
-	# Create HTML result in SQLite :
-	#	.mode html
-	#	.output output.html
-	#	<request>
-	#
-	# Request will be output to html directly
-	#
-	# OUTPUT AS HTML NOT WORKING YET
-
-	con = None
+	connection = None
 
 	try:
-	    con = lite.connect(db_path)
+		# Connect to the database.db
+		# --------------------------------------------------------
+	    connection = lite.connect(db_path)
 	    print('Successfully connected to \"%s\"' % db_path)
+	    cursor = connection.cursor()
 
-	    cur = con.cursor()
-
-	    #TODO
-	    #output as HTML
+		# Execute SQL query
+		# --------------------------------------------------------
 	    print('executing \"%s\"' % sqlQuery)
-	    cur.execute(sqlQuery)
+	    cursor.execute(sqlQuery)
 	    
-	    data = cur.fetchall()
-	    
-	    print("RESULT: ", data)            
+	    # Get all results
+		# --------------------------------------------------------
+	    data = cursor.fetchall()
+	    print("RESULT: ", data)  
 	    
 	except lite.Error as e:
 	    
@@ -130,38 +122,38 @@ def getSQLResult(sqlQuery, db_path):
 	    sys.exit(1)
 	    
 	finally:
-	    
-	    if con:
-	        con.close()
+	    # Close database connection
+		# --------------------------------------------------------
+	    if connection:
+	        connection.close()
 
-	return;
+	return data;
 
 # Transforms the SQL answer into a XML string to be sent to the mediator
-def fromSQLAnswerToXML(answer_path, att_list):
-	#TODO
-	htmlAnswer = open(answer_path, 'r')
-	tree = ET.parse(htmlAnswer)
-	xmlAnswer = '<objects>' + '\n'
+def fromSQLAnswerToXML(answer, att_list, output_path):
+	# Open XML output file
+	# --------------------------------------------------------	
+	result = open(output_path, "w")
 
-	root = tree.getroot()
-	children = list(root)
-	print('root: ', root.tag)
-	
-	# Ok, les \n c'est trop moche, mais pas le temps hein !
+	# Create XML result tree
+	# --------------------------------------------------------
+	root = ET.Element("pokemons")
+	for pokemon in answer:
+		pokemon = ET.SubElement(root, "pokemon")
+		for element in answer:
+			for i in range(0, len(att_list)):
+				att = ET.SubElement(pokemon, att_list[i])
+				att.text = str(element[i])
 
-	for child in children:
-		xmlAnswer += '<pokemon>' + '\n'
-		values = list(child)
-		for i in range(0, len(att_list)):
-			print('att, val : ', att_list[i], values[i].text)
-			xmlAnswer += '<' + att_list[i] + '>' + '\n'
-			xmlAnswer += values[i].text
-			xmlAnswer += '</' + att_list[i] + '>' + '\n'
-		xmlAnswer += '</pokemon>' + '\n'
-	xmlAnswer += '</objects>'
+	# Write XML tree to output file
+	# --------------------------------------------------------
+	string = ET.tostring(root)
+	string = str(string, "utf-8")
+	result.write(string)
 
-	print(xmlAnswer)
-	return xmlAnswer;
+	# Close XML output file
+	# --------------------------------------------------------
+	result.close()
 
 # Performs the main job
 def fromXQueryRequestToXMLResult(xqueryRequest):
@@ -178,6 +170,20 @@ def main():
 	sqlQuery = fromXQueryPartsToSQL(match.group(3), match.group(1), match.group(2))
 
 	print(sqlQuery)
+
+	print("-----------tests getSQLResult and fromSQLAnswerToXML-----------")
+
+	#answer_path = '/home/richard/Downloads/test.html'
+	#list = ['id', 'name']
+	#fromSQLAnswerToXML(answer_path, list)
+
+	#db_path = 'SQL DB/temp.db'
+	#sqlQuery = 'SELECT * FROM pokemon WHERE id=1'
+	#answer = getSQLResult(sqlQuery, db_path)
+	#att_list = ['id', 'name']
+	#output_path = 'result.xml'
+
+	#fromSQLAnswerToXML(answer, att_list, output_path)
 
 if(__name__=="__main__"):
 	main()
