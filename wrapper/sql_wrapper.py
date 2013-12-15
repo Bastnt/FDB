@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf8 -*-
 
 # PROJET BDA SIM
 # Dans ce fichier sera codé le wrapper 1 :
@@ -7,6 +7,9 @@
 # Il doit traduire les requêtes en SQL, puis traduire le
 # résultat en XML avant de le renvoyer à l'assembleur.
 import re
+import xml.etree.cElementTree as ET
+import sys
+import sqlite3 as lite
 
 # Database
 db_path = "../data/sql/database.db"
@@ -17,7 +20,7 @@ db_path = "../data/sql/database.db"
 # .read request_team.sql
 # (and wait)
 
-# Converts the python request into a valid SQL request
+# Converts the python Req into a valid SQL request
 def fromPythonReqToSQL(request):
 	# Selected columns from the table
 	# --------------------------------------------------------
@@ -40,13 +43,11 @@ def getSQLResult(sqlQuery, db_path):
 
 		# Execute SQL query
 		# --------------------------------------------------------
-	    print('executing \"%s\"' % sqlQuery)
 	    cursor.execute(sqlQuery)
 	    
 	    # Get all results
 		# --------------------------------------------------------
 	    data = cursor.fetchall()
-	    print("RESULT: ", data)  
 	    
 	except lite.Error as e:
 	    
@@ -62,16 +63,19 @@ def getSQLResult(sqlQuery, db_path):
 	return data;
 
 # Transforms the SQL answer into a XML string to be sent to the mediator
-def fromSQLAnswerToXML(answer, att_list):
+def fromSQLAnswerToXML(answer, request):
 	# Create XML result tree
 	# --------------------------------------------------------
-	root = ET.Element("pokemons")
-	for pokemon in answer:
-		pokemon = ET.SubElement(root, "pokemon")
-		for element in answer:
-			for i in range(0, len(att_list)):
-				att = ET.SubElement(pokemon, att_list[i])
-				att.text = str(element[i])
+	if(request.table == "pokemon"):
+		root = ET.Element("pokemons")
+	else:
+		root = ET.Element("teams")
+
+	for tupleAnswer in answer:
+		child = ET.SubElement(root, request.table)
+		for i in range(0, len(request.projection)):
+			att = ET.SubElement(child, request.projection[i])
+			att.text = str(tupleAnswer[i])
 
 	# Write XML tree to output file
 	# --------------------------------------------------------
@@ -80,16 +84,24 @@ def fromSQLAnswerToXML(answer, att_list):
 	return string
 
 def execute(request):
-	print("What to execute: ")
-	print("SELECT {} FROM {} WHERE {}".format(", ".join(request.projection), request.table, request.selection))
 	sqlQuery = fromPythonReqToSQL(request)
 	sqlAnswer = getSQLResult(sqlQuery, db_path)
-	fromRequestToXMLResult(request)
+	return fromSQLAnswerToXML(sqlAnswer, request)
 
-# Testing main (can be deleted in the "release" version)
-def main():	
-	#print(execute(req))
-	return;
+# --------------------------------------------------------
+# DELETE CONTENT BELOW FOR RELEASE
+# --------------------------------------------------------
+# class Req:
+# 	def __init__(self, projection = [], selection = "", table = ""):
+# 		self.projection = projection
+# 		self.selection = selection
+# 		self.table = table
 
-if(__name__=="__main__"):
-	main()
+# def main():	
+# 	#print(execute(req))
+# 	requete = Req(["trainerName", "victoryCounter"],"victoryCounter > 90","team")
+# 	print(execute(requete))
+# 	return;
+
+# if(__name__=="__main__"):
+# 	main()
