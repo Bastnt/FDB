@@ -7,15 +7,19 @@ class Req:
 		self.selection = selection
 		self.table = table
 
-class Wrapper:
-	def __init__(self, name, execute_pointer):
+class DataBase:
+	def __init__(self, name, table, wrapper_execute_pointer):
 		self.name = name
-		self.execute_pointer = execute_pointer
+		self.table = table
+		self.executer = wrapper_execute_pointer
 
 	def execute(self, req):
-		self.execute_pointer(req)
+		req.table = self.table
+		self.executer(req)
 
 def schema():
+	# dummy Schema
+
 	# === XML example verified by this schema: ===
 	# <Node:root>
 	# 	<Node:team Leaf:id="1">
@@ -29,14 +33,14 @@ def schema():
 	# 	</Node:team>
 	# </Node:root>
 
-	sql = Wrapper("SQL", sql_wrapper.execute)
-	xml = Wrapper("XML", xml_wrapper.execute)
+	sql_pokemon = DataBase("SQL", "pokemon", sql_wrapper.execute)
+	xml_moves = DataBase("XML", "moves.xml", xml_wrapper.execute)
 
 	root = Node(None, "root")
 	team = Node(root, "team")
 
 	root.children.append(team)
-	team.attributes.append(Attribute(team, "id", [sql,xml]))
-	team.children.append(Leaf(team, "nom", [xml]))
-	team.children.append(Leaf(team, "age", [sql]))
+	team.attributes.append(Attribute(team, "id", [sql_pokemon,xml_moves]))
+	team.children.append(Leaf(team, "nom", [xml_moves]))
+	team.children.append(Leaf(team, "age", [sql_pokemon]))
 	return root
