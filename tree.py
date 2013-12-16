@@ -6,6 +6,8 @@ class Tree:
 	def __init__(self, parent, name):
 		self.name = name
 		self.parent = parent
+		if(parent):
+			parent.children.append(self)
 
 	# Find all the the tags with this name
 	def find_all(self, name):

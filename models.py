@@ -7,9 +7,9 @@ class Req:
 		self.selection = selection
 		self.table = table
 
-class Database:
-	def __init__(self, name, table, wrapper_execute_pointer):
-		self.name = name
+class Cluster:
+	def __init__(self, origin, table, wrapper_execute_pointer):
+		self.origin = origin # Whether "sql" or "xml"
 		self.table = table
 		self.executer = wrapper_execute_pointer
 
@@ -18,29 +18,65 @@ class Database:
 		self.executer(req)
 
 def schema():
-	# dummy Schema
-
 	# === XML example verified by this schema: ===
-	# <Node:root>
-	# 	<Node:team Leaf:id="1">
-	# 		<Leaf:nom>Rocket</Leaf:nom>
-	# 		<Leaf:age>22</Leaf:nom>
-	# 	</Node:team>
+	# <Node:pokemonData>
+	# 	<Node:teams Attribute:id="1">
+	# 		<Node:team Attribute:id="1" >
+	#			<Leaf:trainerName>Billy</Leaf:trainerName>
+	#		</Node:team>
+	# 	</Node:teams>
+	# </Node:pokemonData>
 
-	# 	<Node:team Leaf:id="2">
-	# 		<Leaf:nom>Ash</Leaf:nom>
-	# 		<Leaf:age>13</Leaf:nom>
-	# 	</Node:team>
-	# </Node:root>
+	sql_pokemon = Cluster("sql", "pokemon", sql_wrapper.execute)
+	sql_team = Cluster("sql", "team", sql_wrapper.execute)
+	xml_moves = Cluster("xml", "moves", xml_wrapper.execute)
+	xml_team = Cluster("xml", "teams", xml_wrapper.execute)
+	xml_pokemon = Cluster("xml", "pokemons", xml_wrapper.execute)
 
-	sql_pokemon = Database("SQL", "pokemon", sql_wrapper.execute)
-	xml_moves = Database("XML", "moves.xml", xml_wrapper.execute)
+	root = Node(None, "pokemonData")
+	teams = Node(root, "teams")
+	moves = Node(root, "moves")
+	pokedex = Node(root, "pokedex")
 
-	root = Node(None, "root")
-	team = Node(root, "team")
+	team = Node(team, "team")
+	Leaf(team, "trainerName", [sql_team])
+	Leaf(team, "victoryCounter", [sql_team])
+	Leaf(team, "defeatCounter", [sql_team])
+	Attribute(team, "@id", [sql_pokemon,xml_moves])
 
-	root.children.append(team)
-	team.children.append(Attribute(team, "@id", [sql_pokemon,xml_moves]))
-	team.children.append(Leaf(team, "nom", [xml_moves]))
-	team.children.append(Leaf(team, "age", [sql_pokemon]))
+	pokemon = Node(team, "pokemon")
+	Leaf(pokemon, "nickname", [xml_team])
+	Leaf(pokemon, "name", [sql_pokemon])
+	Leaf(pokemon, "height", [sql_pokemon])
+	Leaf(pokemon, "weight", [sql_pokemon])
+	Leaf(pokemon, "type1", [xml_pokemon])
+	Leaf(pokemon, "type2", [xml_pokemon])
+	Leaf(pokemon, "base_experience", [sql_pokemon])
+	Attribute(pokemon, "@id", [sql_pokemon,xml_team,xml_pokemon])
+
+	movePokemon = Node(pokemon, "move")
+	Leaf(movePokemon, "spePhySta", [xml_moves])
+	Leaf(movePokemon, "power", [xml_moves])
+	Leaf(movePokemon, "accuracy", [xml_moves])
+	Leaf(movePokemon, "pp", [xml_moves])
+	Leaf(movePokemon, "description", [xml_moves])
+	Attribute(movePokemon, "@id", [xml_team, xml_moves])
+
+	move = Node(pokemon, "move")
+	Leaf(move, "spePhySta", [xml_team])
+	Leaf(move, "power", [xml_moves])
+	Leaf(move, "accuracy", [xml_moves])
+	Leaf(move, "pp", [xml_moves])
+	Leaf(move, "description", [xml_moves])
+	Attribute(move, "@id", [xml_moves])
+
+	pokemonPokedex = Node(team, "pokemon")
+	Leaf(pokemonPokedex, "name", [sql_pokemon])
+	Leaf(pokemonPokedex, "height", [sql_pokemon])
+	Leaf(pokemonPokedex, "weight", [sql_pokemon])
+	Leaf(pokemon, "type1", [xml_pokemon])
+	Leaf(pokemon, "type2", [xml_pokemon])
+	Leaf(pokemonPokedex, "base_experience", [sql_pokemon])
+	Attribute(pokemonPokedex, "@id", [sql_pokemon,xml_pokemon])
+	
 	return root
