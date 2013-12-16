@@ -8,7 +8,7 @@
 
 # failed to install lxml on my windows machine
 
-import lxml.etree as ET
+import xml.etree.cElementTree as ET
 import sys
 # sys.path.insert(0, '/usr/bin/swig/python')
 # import zorba_api
@@ -78,18 +78,18 @@ def main():
 	print('main')
 	print('******')
 
-	# print("tests")
-	# merge("example.xml", "merge.xsl", "result.xml")
-	# merge("example_b.xml", "merge.xsl", "result_b.xml")
-	# add_attribute("test.xml", "res_test.xml", "db", "1")
+	print("tests")
+	merge("example.xml", "merge.xsl", "result.xml")
+	merge("example_b.xml", "merge.xsl", "result_b.xml")
+	add_attribute("test.xml", "res_test.xml", "db", "1")
 
-	# add_attribute("file1.xml", "file1_bis.xml", "db", "1")
-	# add_attribute("file2.xml", "file2_bis.xml", "db", "2")
-	# create_binding_xml("file1_bis.xml", "file2_bis.xml", "template.xml", "template_result.xml")
-	# merge("template_result.xml", "merge.xsl", "result.xml")
+	add_attribute("file1.xml", "file1_bis.xml", "db", "1")
+	add_attribute("file2.xml", "file2_bis.xml", "db", "2")
+	create_binding_xml("file1_bis.xml", "file2_bis.xml", "template.xml", "template_result.xml")
+	merge("template_result.xml", "merge.xsl", "result.xml")
 
-	# create_binding_xml("moves.xml", "moves2.xml", "template.xml", "moves_res.xml")
-	# merge("moves_res.xml", "merge.xsl", "result_moves.xml")
+	create_binding_xml("moves.xml", "moves2.xml", "template.xml", "moves_res.xml")
+	merge("moves_res.xml", "merge.xsl", "result_moves.xml")
 
 if __name__ == "__main__":
 	main()

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+
+<element name="pokemonData">
+	<complexType>
+		<sequence>
+			<!-- TEAMS -->
+			<element name="teams">
+				<complexType>
+					<sequence>
+						<element name="team" maxOccurs="unbounded">
+							<complexType>
+								<sequence>
+									<element name="trainerName" type="string" />
+									<element name="victoryCounter" type="integer" />
+									<element name="trainerName" type="string" />
+									<element name="pokemon" minOccurs="1" maxOccurs="6">
+										<complexType>
+											<sequence>
+												<element name="nickname" type="string" />
+												<element name="move" maxOccurs="4">
+													<complexType>
+														<attribute name="id" type="string" use="required" />
+													</complexType>
+												</element>
+											</sequence>
+											<attribute name="id" type="string" use="required" />
+										</complexType>
+									</element>
+								</sequence>
+								<attribute name="id" type="string" use="required" />
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+			<!-- MOVES -->
+			<element name="moves">
+				<complexType>
+					<sequence>
+						<element name="move" maxOccurs="unbounded">
+							<complexType>
+								<sequence>
+									<element name="spePhySta" type="string"/>
+									<element name="power" type="integer" minOccurs="0" />
+									<element name="accuracy" type="integer" minOccurs="0"/>
+									<element name="pp" type="integer" />
+									<element name="description" type="string" minOccurs="0" />
+								</sequence>
+								<attribute name="id" type="string" use="required" />
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+			<!-- POKEDEX -->
+			<element name="pokedex">
+				<complexType>
+					<sequence>
+						<element name="pokemon" maxOccurs="unbounded">
+							<complexType>
+								<sequence>
+									<element name="pokedexNumber" type="string"/>
+									<element name="name" type="string" />
+									<element name="height" type="string" />
+									<element name="weight" type="string" />
+									<element name="base_experience" type="string" />
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+
+		</sequence>
+	</complexType>
+</element>
+</schema>
