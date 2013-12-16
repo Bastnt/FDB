@@ -1,0 +1,2503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pokemons>
+<pokemon id="1">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="2">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="3">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="4">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="5">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="6">
+	<type1>Fire</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="7">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="8">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="9">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="10">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="11">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="12">
+	<type1>Bug</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="13">
+	<type1>Bug</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="14">
+	<type1>Bug</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="15">
+	<type1>Bug</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="16">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="17">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="18">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="19">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="20">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="21">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="22">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="23">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="24">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="25">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="26">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="27">
+	<type1>Ground</type1>
+</pokemon>
+<pokemon id="28">
+	<type1>Ground</type1>
+</pokemon>
+<pokemon id="29">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="30">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="31">
+	<type1>Poison</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="32">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="33">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="34">
+	<type1>Poison</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="35">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="36">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="37">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="38">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="39">
+	<type1>Normal</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="40">
+	<type1>Normal</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="41">
+	<type1>Poison</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="42">
+	<type1>Poison</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="43">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="44">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="45">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="46">
+	<type1>Bug</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="47">
+	<type1>Bug</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="48">
+	<type1>Bug</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="49">
+	<type1>Bug</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="50">
+	<type1>Ground</type1>
+</pokemon>
+<pokemon id="51">
+	<type1>Ground</type1>
+</pokemon>
+<pokemon id="52">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="53">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="54">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="55">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="56">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="57">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="58">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="59">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="60">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="61">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="62">
+	<type1>Water</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="63">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="64">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="65">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="66">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="67">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="68">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="69">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="70">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="71">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="72">
+	<type1>Water</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="73">
+	<type1>Water</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="74">
+	<type1>Rock</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="75">
+	<type1>Rock</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="76">
+	<type1>Rock</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="77">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="78">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="79">
+	<type1>Water</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="80">
+	<type1>Water</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="81">
+	<type1>Electric</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="82">
+	<type1>Electric</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="83">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="84">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="85">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="86">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="87">
+	<type1>Water</type1>
+	<type2>Ice</type2>
+</pokemon>
+<pokemon id="88">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="89">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="90">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="91">
+	<type1>Water</type1>
+	<type2>Ice</type2>
+</pokemon>
+<pokemon id="92">
+	<type1>Ghost</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="93">
+	<type1>Ghost</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="94">
+	<type1>Ghost</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="95">
+	<type1>Rock</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="96">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="97">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="98">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="99">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="100">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="101">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="102">
+	<type1>Grass</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="103">
+	<type1>Grass</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="104">
+	<type1>Ground</type1>
+</pokemon>
+<pokemon id="105">
+	<type1>Ground</type1>
+</pokemon>
+<pokemon id="106">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="107">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="108">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="109">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="110">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="111">
+	<type1>Ground</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="112">
+	<type1>Ground</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="113">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="114">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="115">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="116">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="117">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="118">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="119">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="120">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="121">
+	<type1>Water</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="122">
+	<type1>Psychic</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="123">
+	<type1>Bug</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="124">
+	<type1>Ice</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="125">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="126">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="127">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="128">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="129">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="130">
+	<type1>Water</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="131">
+	<type1>Water</type1>
+	<type2>Ice</type2>
+</pokemon>
+<pokemon id="132">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="133">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="134">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="135">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="136">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="137">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="138">
+	<type1>Rock</type1>
+	<type2>Water</type2>
+</pokemon>
+<pokemon id="139">
+	<type1>Rock</type1>
+	<type2>Water</type2>
+</pokemon>
+<pokemon id="140">
+	<type1>Rock</type1>
+	<type2>Water</type2>
+</pokemon>
+<pokemon id="141">
+	<type1>Rock</type1>
+	<type2>Water</type2>
+</pokemon>
+<pokemon id="142">
+	<type1>Rock</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="143">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="144">
+	<type1>Ice</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="145">
+	<type1>Electric</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="146">
+	<type1>Fire</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="147">
+	<type1>Dragon</type1>
+</pokemon>
+<pokemon id="148">
+	<type1>Dragon</type1>
+</pokemon>
+<pokemon id="149">
+	<type1>Dragon</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="150">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="151">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="152">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="153">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="154">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="155">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="156">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="157">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="158">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="159">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="160">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="161">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="162">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="163">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="164">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="165">
+	<type1>Bug</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="166">
+	<type1>Bug</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="167">
+	<type1>Bug</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="168">
+	<type1>Bug</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="169">
+	<type1>Poison</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="170">
+	<type1>Water</type1>
+	<type2>Electric</type2>
+</pokemon>
+<pokemon id="171">
+	<type1>Water</type1>
+	<type2>Electric</type2>
+</pokemon>
+<pokemon id="172">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="173">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="174">
+	<type1>Normal</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="175">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="176">
+	<type1>Fairy</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="177">
+	<type1>Psychic</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="178">
+	<type1>Psychic</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="179">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="180">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="181">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="182">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="183">
+	<type1>Water</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="184">
+	<type1>Water</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="185">
+	<type1>Rock</type1>
+</pokemon>
+<pokemon id="186">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="187">
+	<type1>Grass</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="188">
+	<type1>Grass</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="189">
+	<type1>Grass</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="190">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="191">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="192">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="193">
+	<type1>Bug</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="194">
+	<type1>Water</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="195">
+	<type1>Water</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="196">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="197">
+	<type1>Dark</type1>
+</pokemon>
+<pokemon id="198">
+	<type1>Dark</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="199">
+	<type1>Water</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="200">
+	<type1>Ghost</type1>
+</pokemon>
+<pokemon id="201">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="202">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="203">
+	<type1>Normal</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="204">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="205">
+	<type1>Bug</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="206">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="207">
+	<type1>Ground</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="208">
+	<type1>Steel</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="209">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="210">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="211">
+	<type1>Water</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="212">
+	<type1>Bug</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="213">
+	<type1>Bug</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="214">
+	<type1>Bug</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="215">
+	<type1>Dark</type1>
+	<type2>Ice</type2>
+</pokemon>
+<pokemon id="216">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="217">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="218">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="219">
+	<type1>Fire</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="220">
+	<type1>Ice</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="221">
+	<type1>Ice</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="222">
+	<type1>Water</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="223">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="224">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="225">
+	<type1>Ice</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="226">
+	<type1>Water</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="227">
+	<type1>Steel</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="228">
+	<type1>Dark</type1>
+	<type2>Fire</type2>
+</pokemon>
+<pokemon id="229">
+	<type1>Dark</type1>
+	<type2>Fire</type2>
+</pokemon>
+<pokemon id="230">
+	<type1>Water</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="231">
+	<type1>Ground</type1>
+</pokemon>
+<pokemon id="232">
+	<type1>Ground</type1>
+</pokemon>
+<pokemon id="233">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="234">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="235">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="236">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="237">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="238">
+	<type1>Ice</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="239">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="240">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="241">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="242">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="243">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="244">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="245">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="246">
+	<type1>Rock</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="247">
+	<type1>Rock</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="248">
+	<type1>Rock</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="249">
+	<type1>Psychic</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="250">
+	<type1>Fire</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="251">
+	<type1>Psychic</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="252">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="253">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="254">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="255">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="256">
+	<type1>Fire</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="257">
+	<type1>Fire</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="258">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="259">
+	<type1>Water</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="260">
+	<type1>Water</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="261">
+	<type1>Dark</type1>
+</pokemon>
+<pokemon id="262">
+	<type1>Dark</type1>
+</pokemon>
+<pokemon id="263">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="264">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="265">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="266">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="267">
+	<type1>Bug</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="268">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="269">
+	<type1>Bug</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="270">
+	<type1>Water</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="271">
+	<type1>Water</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="272">
+	<type1>Water</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="273">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="274">
+	<type1>Grass</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="275">
+	<type1>Grass</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="276">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="277">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="278">
+	<type1>Water</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="279">
+	<type1>Water</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="280">
+	<type1>Psychic</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="281">
+	<type1>Psychic</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="282">
+	<type1>Psychic</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="283">
+	<type1>Bug</type1>
+	<type2>Water</type2>
+</pokemon>
+<pokemon id="284">
+	<type1>Bug</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="285">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="286">
+	<type1>Grass</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="287">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="288">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="289">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="290">
+	<type1>Bug</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="291">
+	<type1>Bug</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="292">
+	<type1>Bug</type1>
+	<type2>Ghost</type2>
+</pokemon>
+<pokemon id="293">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="294">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="295">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="296">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="297">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="298">
+	<type1>Normal</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="299">
+	<type1>Rock</type1>
+</pokemon>
+<pokemon id="300">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="301">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="302">
+	<type1>Dark</type1>
+	<type2>Ghost</type2>
+</pokemon>
+<pokemon id="303">
+	<type1>Steel</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="304">
+	<type1>Steel</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="305">
+	<type1>Steel</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="306">
+	<type1>Steel</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="307">
+	<type1>Fight</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="308">
+	<type1>Fight</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="309">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="310">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="311">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="312">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="313">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="314">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="315">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="316">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="317">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="318">
+	<type1>Water</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="319">
+	<type1>Water</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="320">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="321">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="322">
+	<type1>Fire</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="323">
+	<type1>Fire</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="324">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="325">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="326">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="327">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="328">
+	<type1>Ground</type1>
+</pokemon>
+<pokemon id="329">
+	<type1>Ground</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="330">
+	<type1>Ground</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="331">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="332">
+	<type1>Grass</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="333">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="334">
+	<type1>Dragon</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="335">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="336">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="337">
+	<type1>Rock</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="338">
+	<type1>Rock</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="339">
+	<type1>Water</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="340">
+	<type1>Water</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="341">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="342">
+	<type1>Water</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="343">
+	<type1>Ground</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="344">
+	<type1>Ground</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="345">
+	<type1>Rock</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="346">
+	<type1>Rock</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="347">
+	<type1>Rock</type1>
+	<type2>Bug</type2>
+</pokemon>
+<pokemon id="348">
+	<type1>Rock</type1>
+	<type2>Bug</type2>
+</pokemon>
+<pokemon id="349">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="350">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="351">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="352">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="353">
+	<type1>Ghost</type1>
+</pokemon>
+<pokemon id="354">
+	<type1>Ghost</type1>
+</pokemon>
+<pokemon id="355">
+	<type1>Ghost</type1>
+</pokemon>
+<pokemon id="356">
+	<type1>Ghost</type1>
+</pokemon>
+<pokemon id="357">
+	<type1>Grass</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="358">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="359">
+	<type1>Dark</type1>
+</pokemon>
+<pokemon id="360">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="361">
+	<type1>Ice</type1>
+</pokemon>
+<pokemon id="362">
+	<type1>Ice</type1>
+</pokemon>
+<pokemon id="363">
+	<type1>Ice</type1>
+	<type2>Water</type2>
+</pokemon>
+<pokemon id="364">
+	<type1>Ice</type1>
+	<type2>Water</type2>
+</pokemon>
+<pokemon id="365">
+	<type1>Ice</type1>
+	<type2>Water</type2>
+</pokemon>
+<pokemon id="366">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="367">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="368">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="369">
+	<type1>Water</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="370">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="371">
+	<type1>Dragon</type1>
+</pokemon>
+<pokemon id="372">
+	<type1>Dragon</type1>
+</pokemon>
+<pokemon id="373">
+	<type1>Dragon</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="374">
+	<type1>Steel</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="375">
+	<type1>Steel</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="376">
+	<type1>Steel</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="377">
+	<type1>Rock</type1>
+</pokemon>
+<pokemon id="378">
+	<type1>Ice</type1>
+</pokemon>
+<pokemon id="379">
+	<type1>Steel</type1>
+</pokemon>
+<pokemon id="380">
+	<type1>Dragon</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="381">
+	<type1>Dragon</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="382">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="383">
+	<type1>Ground</type1>
+</pokemon>
+<pokemon id="384">
+	<type1>Dragon</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="385">
+	<type1>Steel</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="386">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="387">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="388">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="389">
+	<type1>Grass</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="390">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="391">
+	<type1>Fire</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="392">
+	<type1>Fire</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="393">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="394">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="395">
+	<type1>Water</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="396">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="397">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="398">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="399">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="400">
+	<type1>Normal</type1>
+	<type2>Water</type2>
+</pokemon>
+<pokemon id="401">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="402">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="403">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="404">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="405">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="406">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="407">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="408">
+	<type1>Rock</type1>
+</pokemon>
+<pokemon id="409">
+	<type1>Rock</type1>
+</pokemon>
+<pokemon id="410">
+	<type1>Rock</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="411">
+	<type1>Rock</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="412">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="413">
+	<type1>Bug</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="414">
+	<type1>Bug</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="415">
+	<type1>Bug</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="416">
+	<type1>Bug</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="417">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="418">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="419">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="420">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="421">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="422">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="423">
+	<type1>Water</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="424">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="425">
+	<type1>Ghost</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="426">
+	<type1>Ghost</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="427">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="428">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="429">
+	<type1>Ghost</type1>
+</pokemon>
+<pokemon id="430">
+	<type1>Dark</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="431">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="432">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="433">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="434">
+	<type1>Poison</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="435">
+	<type1>Poison</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="436">
+	<type1>Steel</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="437">
+	<type1>Steel</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="438">
+	<type1>Rock</type1>
+</pokemon>
+<pokemon id="439">
+	<type1>Psychic</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="440">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="441">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="442">
+	<type1>Ghost</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="443">
+	<type1>Dragon</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="444">
+	<type1>Dragon</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="445">
+	<type1>Dragon</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="446">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="447">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="448">
+	<type1>Fight</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="449">
+	<type1>Ground</type1>
+</pokemon>
+<pokemon id="450">
+	<type1>Ground</type1>
+</pokemon>
+<pokemon id="451">
+	<type1>Poison</type1>
+	<type2>Bug</type2>
+</pokemon>
+<pokemon id="452">
+	<type1>Poison</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="453">
+	<type1>Poison</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="454">
+	<type1>Poison</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="455">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="456">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="457">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="458">
+	<type1>Water</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="459">
+	<type1>Grass</type1>
+	<type2>Ice</type2>
+</pokemon>
+<pokemon id="460">
+	<type1>Grass</type1>
+	<type2>Ice</type2>
+</pokemon>
+<pokemon id="461">
+	<type1>Dark</type1>
+	<type2>Ice</type2>
+</pokemon>
+<pokemon id="462">
+	<type1>Electric</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="463">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="464">
+	<type1>Ground</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="465">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="466">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="467">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="468">
+	<type1>Fairy</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="469">
+	<type1>Bug</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="470">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="471">
+	<type1>Ice</type1>
+</pokemon>
+<pokemon id="472">
+	<type1>Ground</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="473">
+	<type1>Ice</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="474">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="475">
+	<type1>Psychic</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="476">
+	<type1>Rock</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="477">
+	<type1>Ghost</type1>
+</pokemon>
+<pokemon id="478">
+	<type1>Ice</type1>
+	<type2>Ghost</type2>
+</pokemon>
+<pokemon id="479">
+	<type1>Electric</type1>
+	<type2>Ghost</type2>
+</pokemon>
+<pokemon id="480">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="481">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="482">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="483">
+	<type1>Steel</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="484">
+	<type1>Water</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="485">
+	<type1>Fire</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="486">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="487">
+	<type1>Ghost</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="488">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="489">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="490">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="491">
+	<type1>Dark</type1>
+</pokemon>
+<pokemon id="492">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="493">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="494">
+	<type1>Psychic</type1>
+	<type2>Fire</type2>
+</pokemon>
+<pokemon id="495">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="496">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="497">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="498">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="499">
+	<type1>Fire</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="500">
+	<type1>Fire</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="501">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="502">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="503">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="504">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="505">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="506">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="507">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="508">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="509">
+	<type1>Dark</type1>
+</pokemon>
+<pokemon id="510">
+	<type1>Dark</type1>
+</pokemon>
+<pokemon id="511">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="512">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="513">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="514">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="515">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="516">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="517">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="518">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="519">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="520">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="521">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="522">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="523">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="524">
+	<type1>Rock</type1>
+</pokemon>
+<pokemon id="525">
+	<type1>Rock</type1>
+</pokemon>
+<pokemon id="526">
+	<type1>Rock</type1>
+</pokemon>
+<pokemon id="527">
+	<type1>Psychic</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="528">
+	<type1>Psychic</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="529">
+	<type1>Ground</type1>
+</pokemon>
+<pokemon id="530">
+	<type1>Ground</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="531">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="532">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="533">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="534">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="535">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="536">
+	<type1>Water</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="537">
+	<type1>Water</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="538">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="539">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="540">
+	<type1>Bug</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="541">
+	<type1>Bug</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="542">
+	<type1>Bug</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="543">
+	<type1>Bug</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="544">
+	<type1>Bug</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="545">
+	<type1>Bug</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="546">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="547">
+	<type1>Grass</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="548">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="549">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="550">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="551">
+	<type1>Ground</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="552">
+	<type1>Ground</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="553">
+	<type1>Ground</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="554">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="555">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="556">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="557">
+	<type1>Bug</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="558">
+	<type1>Bug</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="559">
+	<type1>Dark</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="560">
+	<type1>Dark</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="561">
+	<type1>Psychic</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="562">
+	<type1>Ghost</type1>
+</pokemon>
+<pokemon id="563">
+	<type1>Ghost</type1>
+</pokemon>
+<pokemon id="564">
+	<type1>Water</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="565">
+	<type1>Water</type1>
+	<type2>Rock</type2>
+</pokemon>
+<pokemon id="566">
+	<type1>Rock</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="567">
+	<type1>Rock</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="568">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="569">
+	<type1>Poison</type1>
+</pokemon>
+<pokemon id="570">
+	<type1>Dark</type1>
+</pokemon>
+<pokemon id="571">
+	<type1>Dark</type1>
+</pokemon>
+<pokemon id="572">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="573">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="574">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="575">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="576">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="577">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="578">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="579">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="580">
+	<type1>Water</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="581">
+	<type1>Water</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="582">
+	<type1>Ice</type1>
+</pokemon>
+<pokemon id="583">
+	<type1>Ice</type1>
+</pokemon>
+<pokemon id="584">
+	<type1>Ice</type1>
+</pokemon>
+<pokemon id="585">
+	<type1>Normal</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="586">
+	<type1>Normal</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="587">
+	<type1>Electric</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="588">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="589">
+	<type1>Bug</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="590">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="591">
+	<type1>Grass</type1>
+	<type2>Poison</type2>
+</pokemon>
+<pokemon id="592">
+	<type1>Water</type1>
+	<type2>Ghost</type2>
+</pokemon>
+<pokemon id="593">
+	<type1>Water</type1>
+	<type2>Ghost</type2>
+</pokemon>
+<pokemon id="594">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="595">
+	<type1>Bug</type1>
+	<type2>Electric</type2>
+</pokemon>
+<pokemon id="596">
+	<type1>Bug</type1>
+	<type2>Electric</type2>
+</pokemon>
+<pokemon id="597">
+	<type1>Grass</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="598">
+	<type1>Grass</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="599">
+	<type1>Steel</type1>
+</pokemon>
+<pokemon id="600">
+	<type1>Steel</type1>
+</pokemon>
+<pokemon id="601">
+	<type1>Steel</type1>
+</pokemon>
+<pokemon id="602">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="603">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="604">
+	<type1>Electric</type1>
+</pokemon>
+<pokemon id="605">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="606">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="607">
+	<type1>Ghost</type1>
+	<type2>Fire</type2>
+</pokemon>
+<pokemon id="608">
+	<type1>Ghost</type1>
+	<type2>Fire</type2>
+</pokemon>
+<pokemon id="609">
+	<type1>Ghost</type1>
+	<type2>Fire</type2>
+</pokemon>
+<pokemon id="610">
+	<type1>Dragon</type1>
+</pokemon>
+<pokemon id="611">
+	<type1>Dragon</type1>
+</pokemon>
+<pokemon id="612">
+	<type1>Dragon</type1>
+</pokemon>
+<pokemon id="613">
+	<type1>Ice</type1>
+</pokemon>
+<pokemon id="614">
+	<type1>Ice</type1>
+</pokemon>
+<pokemon id="615">
+	<type1>Ice</type1>
+</pokemon>
+<pokemon id="616">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="617">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="618">
+	<type1>Ground</type1>
+	<type2>Electric</type2>
+</pokemon>
+<pokemon id="619">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="620">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="621">
+	<type1>Dragon</type1>
+</pokemon>
+<pokemon id="622">
+	<type1>Ground</type1>
+	<type2>Ghost</type2>
+</pokemon>
+<pokemon id="623">
+	<type1>Ground</type1>
+	<type2>Ghost</type2>
+</pokemon>
+<pokemon id="624">
+	<type1>Dark</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="625">
+	<type1>Dark</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="626">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="627">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="628">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="629">
+	<type1>Dark</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="630">
+	<type1>Dark</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="631">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="632">
+	<type1>Bug</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="633">
+	<type1>Dark</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="634">
+	<type1>Dark</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="635">
+	<type1>Dark</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="636">
+	<type1>Bug</type1>
+	<type2>Fire</type2>
+</pokemon>
+<pokemon id="637">
+	<type1>Bug</type1>
+	<type2>Fire</type2>
+</pokemon>
+<pokemon id="638">
+	<type1>Steel</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="639">
+	<type1>Rock</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="640">
+	<type1>Grass</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="641">
+	<type1>Flying</type1>
+</pokemon>
+<pokemon id="642">
+	<type1>Electric</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="643">
+	<type1>Dragon</type1>
+	<type2>Fire</type2>
+</pokemon>
+<pokemon id="644">
+	<type1>Dragon</type1>
+	<type2>Electric</type2>
+</pokemon>
+<pokemon id="645">
+	<type1>Ground</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="646">
+	<type1>Dragon</type1>
+	<type2>Ice</type2>
+</pokemon>
+<pokemon id="647">
+	<type1>Water</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="648">
+	<type1>Normal</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="649">
+	<type1>Bug</type1>
+	<type2>Steel</type2>
+</pokemon>
+<pokemon id="650">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="651">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="652">
+	<type1>Grass</type1>
+	<type2>Fight</type2>
+</pokemon>
+<pokemon id="653">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="654">
+	<type1>Fire</type1>
+</pokemon>
+<pokemon id="655">
+	<type1>Fire</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="656">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="657">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="658">
+	<type1>Water</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="659">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="660">
+	<type1>Normal</type1>
+	<type2>Ground</type2>
+</pokemon>
+<pokemon id="661">
+	<type1>Normal</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="662">
+	<type1>Fire</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="663">
+	<type1>Fire</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="664">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="665">
+	<type1>Bug</type1>
+</pokemon>
+<pokemon id="666">
+	<type1>Bug</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="667">
+	<type1>Fire</type1>
+	<type2>Normal</type2>
+</pokemon>
+<pokemon id="668">
+	<type1>Fire</type1>
+	<type2>Normal</type2>
+</pokemon>
+<pokemon id="669">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="670">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="671">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="672">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="673">
+	<type1>Grass</type1>
+</pokemon>
+<pokemon id="674">
+	<type1>Fight</type1>
+</pokemon>
+<pokemon id="675">
+	<type1>Fight</type1>
+	<type2>Dark</type2>
+</pokemon>
+<pokemon id="676">
+	<type1>Normal</type1>
+</pokemon>
+<pokemon id="677">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="678">
+	<type1>Psychic</type1>
+</pokemon>
+<pokemon id="679">
+	<type1>Steel</type1>
+	<type2>Ghost</type2>
+</pokemon>
+<pokemon id="680">
+	<type1>Steel</type1>
+	<type2>Ghost</type2>
+</pokemon>
+<pokemon id="681">
+	<type1>Steel</type1>
+	<type2>Ghost</type2>
+</pokemon>
+<pokemon id="682">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="683">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="684">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="685">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="686">
+	<type1>Dark</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="687">
+	<type1>Dark</type1>
+	<type2>Psychic</type2>
+</pokemon>
+<pokemon id="688">
+	<type1>Rock</type1>
+	<type2>Water</type2>
+</pokemon>
+<pokemon id="689">
+	<type1>Rock</type1>
+	<type2>Water</type2>
+</pokemon>
+<pokemon id="690">
+	<type1>Poison</type1>
+	<type2>Water</type2>
+</pokemon>
+<pokemon id="691">
+	<type1>Poison</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="692">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="693">
+	<type1>Water</type1>
+</pokemon>
+<pokemon id="694">
+	<type1>Electric</type1>
+	<type2>Normal</type2>
+</pokemon>
+<pokemon id="695">
+	<type1>Electric</type1>
+	<type2>Normal</type2>
+</pokemon>
+<pokemon id="696">
+	<type1>Rock</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="697">
+	<type1>Rock</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="698">
+	<type1>Rock</type1>
+	<type2>Ice</type2>
+</pokemon>
+<pokemon id="699">
+	<type1>Rock</type1>
+	<type2>Ice</type2>
+</pokemon>
+<pokemon id="700">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="701">
+	<type1>Fight</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="702">
+	<type1>Electric</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="703">
+	<type1>Rock</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="704">
+	<type1>Dragon</type1>
+</pokemon>
+<pokemon id="705">
+	<type1>Dragon</type1>
+</pokemon>
+<pokemon id="706">
+	<type1>Dragon</type1>
+</pokemon>
+<pokemon id="707">
+	<type1>Steel</type1>
+	<type2>Fairy</type2>
+</pokemon>
+<pokemon id="708">
+	<type1>Ghost</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="709">
+	<type1>Ghost</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="710">
+	<type1>Ghost</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="711">
+	<type1>Ghost</type1>
+	<type2>Grass</type2>
+</pokemon>
+<pokemon id="712">
+	<type1>Ice</type1>
+</pokemon>
+<pokemon id="713">
+	<type1>Ice</type1>
+</pokemon>
+<pokemon id="714">
+	<type1>Flying</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="715">
+	<type1>Flying</type1>
+	<type2>Dragon</type2>
+</pokemon>
+<pokemon id="716">
+	<type1>Fairy</type1>
+</pokemon>
+<pokemon id="717">
+	<type1>Dark</type1>
+	<type2>Flying</type2>
+</pokemon>
+<pokemon id="718">
+	<type1>Dragon</type1>
+	<type2>Ground</type2>
+</pokemon>
+</pokemons>

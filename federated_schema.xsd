@@ -13,13 +13,26 @@
 								<sequence>
 									<element name="trainerName" type="string" />
 									<element name="victoryCounter" type="integer" />
-									<element name="trainerName" type="string" />
+									<element name="defeatCounter" type="string" />
 									<element name="pokemon" minOccurs="1" maxOccurs="6">
 										<complexType>
 											<sequence>
+												<element name="name" type="string" />
 												<element name="nickname" type="string" />
+												<element name="height" type="string" />
+												<element name="weight" type="string" />
+												<element name="base_experience" type="string" />
+												<element name="type1" type="string" />
+												<element name="type2" type="string" minOccurs="0"/>
 												<element name="move" maxOccurs="4">
 													<complexType>
+														<sequence>
+															<element name="spePhySta" type="string"/>
+															<element name="power" type="integer" minOccurs="0" />
+															<element name="accuracy" type="integer" minOccurs="0"/>
+															<element name="pp" type="integer" />
+															<element name="description" type="string" minOccurs="0"/>
+														</sequence>
 														<attribute name="id" type="string" use="required" />
 													</complexType>
 												</element>
@@ -34,6 +47,7 @@
 					</sequence>
 				</complexType>
 			</element>
+
 			<!-- MOVES -->
 			<element name="moves">
 				<complexType>
@@ -45,7 +59,7 @@
 									<element name="power" type="integer" minOccurs="0" />
 									<element name="accuracy" type="integer" minOccurs="0"/>
 									<element name="pp" type="integer" />
-									<element name="description" type="string" minOccurs="0" />
+									<element name="description" type="string" minOccurs="0"/>
 								</sequence>
 								<attribute name="id" type="string" use="required" />
 							</complexType>
@@ -53,6 +67,7 @@
 					</sequence>
 				</complexType>
 			</element>
+			
 			<!-- POKEDEX -->
 			<element name="pokedex">
 				<complexType>
@@ -60,12 +75,14 @@
 						<element name="pokemon" maxOccurs="unbounded">
 							<complexType>
 								<sequence>
-									<element name="pokedexNumber" type="string"/>
 									<element name="name" type="string" />
 									<element name="height" type="string" />
 									<element name="weight" type="string" />
+									<element name="type1" type="string" />
+									<element name="type2" type="string" minOccurs="0"/>
 									<element name="base_experience" type="string" />
 								</sequence>
+								<attribute name="id" type="string" use="required" />
 							</complexType>
 						</element>
 					</sequence>

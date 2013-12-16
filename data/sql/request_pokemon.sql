@@ -1,5 +1,5 @@
 CREATE TABLE pokemon (
-  pokedexNumber INTEGER NOT NULL,
+  id INTEGER NOT NULL,
   name VARCHAR(50) NOT NULL,
   height INTEGER NOT NULL,
   weight INTEGER NOT NULL,
