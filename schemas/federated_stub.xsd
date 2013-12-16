@@ -46,6 +46,7 @@
 						<element name="move" maxOccurs="unbounded">
 							<complexType>
 								<sequence>
+									<element name="name" type="string"/>
 									<element name="spePhySta" type="string"/>
 									<element name="power" type="integer" minOccurs="0" />
 									<element name="accuracy" type="integer" minOccurs="0"/>
@@ -58,15 +59,32 @@
 					</sequence>
 				</complexType>
 			</element>
+			
+			<element name="request_team">
+				<complexType>
+					<sequence>
+						<element name="id" type="integer"/>
+						<element name="trainerName" type="integer"/>
+						<element name="victoryCounter" type="integer"/>
+						<element name="defeatCounter" type="integer"/>
+					</sequence>
+				</complexType>
+			</element>
 
-			<element name="pokedex">
+			<element name="request_pokemon">
 				<complexType>
 					<sequence>
 						<element name="pokemon" maxOccurs="unbounded">
 							<complexType>
 								<sequence>
-									<element name="number" type="string"/>
-									<element name="description" type="string" minOccurs="0" />
+									<element name="id" type="integer"/>
+									<element name="identifier" type="integer"/>
+									<element name="species_id" type="integer"/>
+									<element name="height" type="integer"/>
+									<element name="weight" type="integer"/>
+									<element name="base_experience" type="integer"/>
+									<!--element name="pkd_order" type="integer"/-->
+									<!--element name="is_default" type="integer" minOccurs="0" /-->
 								</sequence>
 							</complexType>
 						</element>
