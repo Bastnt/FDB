@@ -8,7 +8,7 @@ from models import *
 # en différentes sous-requêtes, avant d'interroger les bases
 # via les wrappers
 
-def main(request): 
+def main(request):
 	my_schema = schema()
 
 	print("The request to split: ")

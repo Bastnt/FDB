@@ -1,4 +1,4 @@
-from tree import Node, Leaf, Attribute
+from tree import Node, Attribute, Leaf
 from wrapper import xml_wrapper, sql_wrapper
 
 class Req:
@@ -40,7 +40,7 @@ def schema():
 	team = Node(root, "team")
 
 	root.children.append(team)
-	team.attributes.append(Attribute(team, "id", [sql_pokemon,xml_moves]))
+	team.children.append(Attribute(team, "@id", [sql_pokemon,xml_moves]))
 	team.children.append(Leaf(team, "nom", [xml_moves]))
 	team.children.append(Leaf(team, "age", [sql_pokemon]))
 	return root
