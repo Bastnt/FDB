@@ -1,4 +1,4 @@
-from tree import Node, Leaf, Attribute
+from tree import Node, Attribute, Leaf
 from wrapper import xml_wrapper, sql_wrapper
 
 class Req:
@@ -7,7 +7,7 @@ class Req:
 		self.selection = selection
 		self.table = table
 
-class DataBase:
+class Database:
 	def __init__(self, name, table, wrapper_execute_pointer):
 		self.name = name
 		self.table = table
@@ -33,14 +33,14 @@ def schema():
 	# 	</Node:team>
 	# </Node:root>
 
-	sql_pokemon = DataBase("SQL", "pokemon", sql_wrapper.execute)
-	xml_moves = DataBase("XML", "moves.xml", xml_wrapper.execute)
+	sql_pokemon = Database("SQL", "pokemon", sql_wrapper.execute)
+	xml_moves = Database("XML", "moves.xml", xml_wrapper.execute)
 
 	root = Node(None, "root")
 	team = Node(root, "team")
 
 	root.children.append(team)
-	team.attributes.append(Attribute(team, "id", [sql_pokemon,xml_moves]))
+	team.children.append(Attribute(team, "@id", [sql_pokemon,xml_moves]))
 	team.children.append(Leaf(team, "nom", [xml_moves]))
 	team.children.append(Leaf(team, "age", [sql_pokemon]))
 	return root
