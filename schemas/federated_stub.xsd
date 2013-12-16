@@ -77,8 +77,8 @@
 						<element name="pokemon" maxOccurs="unbounded">
 							<complexType>
 								<sequence>
-									<element name="id" type="integer"/>
-									<element name="identifier" type="integer"/>
+									<element name="number" type="integer"/>
+									<element name="name" type="integer"/>
 									<element name="species_id" type="integer"/>
 									<element name="height" type="integer"/>
 									<element name="weight" type="integer"/>
