@@ -38,7 +38,7 @@ def schema():
 	moves = Node(root, "moves")
 	pokedex = Node(root, "pokedex")
 
-	team = Node(team, "team")
+	team = Node(teams, "team")
 	Leaf(team, "trainerName", [sql_team])
 	Leaf(team, "victoryCounter", [sql_team])
 	Leaf(team, "defeatCounter", [sql_team])

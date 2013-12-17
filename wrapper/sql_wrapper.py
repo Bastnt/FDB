@@ -12,7 +12,7 @@ import sys
 import sqlite3 as lite
 
 # Database
-db_path = "../data/sql/database.db"
+db_path = "data/sql/database.db"
 # To update the database.db : go to ../data/sql/, suppress the previous database.db, open a shell and then type :
 # sqlite3 database.db
 # .read request_pokemon.sql 
