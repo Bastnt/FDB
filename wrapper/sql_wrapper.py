@@ -87,21 +87,3 @@ def execute(request):
 	sqlQuery = fromPythonReqToSQL(request)
 	sqlAnswer = getSQLResult(sqlQuery, db_path)
 	return fromSQLAnswerToXML(sqlAnswer, request)
-
-# --------------------------------------------------------
-# DELETE CONTENT BELOW FOR RELEASE
-# --------------------------------------------------------
-# class Req:
-# 	def __init__(self, projection = [], selection = "", table = ""):
-# 		self.projection = projection
-# 		self.selection = selection
-# 		self.table = table
-
-# def main():	
-# 	#print(execute(req))
-# 	requete = Req(["trainerName", "victoryCounter"],"victoryCounter > 90","team")
-# 	print(execute(requete))
-# 	return;
-
-# if(__name__=="__main__"):
-# 	main()
