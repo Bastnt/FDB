@@ -19,11 +19,13 @@ Pour finir, gardons à l’esprit l’existence possible de conflits, de par la 
 
 Afin d’appréhender le fonctionnement général d’une base de données fédérée, étudions le parcours d’une requête simple. Cette requête est émise par l’utilisateur en XQuery et prend la forme suivante :
 
-for \$nom in doc()//nom
+\begin{verbatim}
+for $nom in doc()//nom
 
-where \$nom/..//age > 18
+where $nom/..//age > 18
 
-return \$nom
+return $nom
+\end{verbatim}
 
 Supposons la base de données fédérée comme composée de deux bases : l’une qu’on appellera R1 est une base de données SQL et contient deux colonnes “id” et “nom”, l’autre appelée R2 est une base de données XML et contient des “personnes” possédant un élément “id” et un élément “age”. // Insérer sqlAndXml\_simple\_example.png
 

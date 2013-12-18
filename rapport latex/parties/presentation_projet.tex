@@ -22,7 +22,6 @@ La base SQL possède une table synthétisant certaines des caractéristiques des
 
 La seconde base de données, la base XML, dispose de 3 fichiers XML : pokémons.xml, teams.xml et moves.xml. Le fichier pokémons.xml regroupe le ou les types de chaque pokémon. Le fichier teams.xml regroupe toutes les teams. Une team est composée d’un dresseur de pokémons. Ce fichier permet de savoir quels pokémons possédait chaque team. Enfin le fichier moves.xml regroupe tous les moves existants, c’est-à-dire toutes les compétences que peuvent avoir les pokémons.
 
-
  \subsubsection{Schéma externe}
 
 Du point de vue de l’utilisateur, les données issues des différentes bases sont regroupées sous un même modèle appelé schéma externe. Lorsque le client veut accéder à des données, il effectue une requête sur ce modèle. La réponse qu’il obtiendra respectera également le modèle du schéma externe.
@@ -61,11 +60,13 @@ Le “Splitter” doit séparer la requête en autant de sous-requêtes qu’il 
 
 Prenons l’exemple suivant de requête XQuery :
 
-for \$type in doc()//team[victory > 10]/pokemon/type1
+\begin{verbatim}
+for $type in doc()//team[victory > 10]/pokemon/type1
 
-where \$type <> “Grass”
+where $type <> “Grass”
 
-return \$type
+return $type
+\end{verbatim}
 
 La partie for sera analysée et divisée selon son contenu. On se concentre seulement sur la partie xPath de l’expression :
 
@@ -93,9 +94,7 @@ On découpe ensuite notre requête en ne gardant que les attributs non virtuels 
 
 type1 (valeur de retour, dernier attribut de la clause for)
 
-On analyse ensuite séquentiellement de haut en bas. Toutes ces lignes seront comparées à la dernière (type1), puisque ce sera le résultat rendu. On simule le fait de partir avec l’ensemble des type1 existants. Ensuite, on filtre cette ensemble avec les conditions (victory > 10) et (type <> “Grass”). On obtiendra ainsi l’ensemble des résultats type1 bien filtrés.
-
-
+On analyse ensuite séquentiellement de haut en bas. Toutes ces lignes seront comparées à la dernière (type1), puisque ce sera le résultat rendu. On simule le fait de partir avec l’ensemble des type1 existants. Ensuite, on filtre cette ensemble avec les conditions (victory $>$ 10) et (type $<>$ “Grass”). On obtiendra ainsi l’ensemble des résultats type1 bien filtrés.
 
 Pour corréler type1 avec victory, on utilise un algorithme de décision.
 
@@ -109,10 +108,12 @@ $C1 --id1 \rightarrow C2 --id2 \rightarrow  C4$
 
 En supposant que ces clusters soient tous dans des bases SQL, on fait les deux sous-requêtes suivantes pour joindre victory et type1 :
 
+\lstset{language=SQL}
+\begin{lstlisting}
 SELECT id1 FROM C1 WHERE victory > 10
 
 SELECT id2 FROM C2 WHERE id2 = id1
-
+\end{lstlisting}
 
 Il se peut que ces sous-requêtes aient besoin d’interroger plusieurs tables ou fichiers, et soient aussi une requête de bases de données fédérées. Tant qu’elles interrogent plusieurs tables ou fichiers, elles sont sous-divisées jusqu’à devenir simples. La complexité de la requête est réduite (on obtient une sous-requête moins compliquée que la précédente), et donc en procédant de façon récursive, on arrivera à répondre aux requêtes éventuellement.
 
@@ -124,9 +125,9 @@ id2 nous a retourné 5 et 6., on produit donc :
 
 selection = “id2 = 5 or id2 = 6”
 
-Ensuite, on analyse [. <> “Grass”]. On le simplifie immédiatement puisqu’il s’agit exactement de l’attribut de retour. L’ultime variable selection est mise à jour:
+Ensuite, on analyse [. $<>$ "Grass"]. On le simplifie immédiatement puisqu’il s’agit exactement de l’attribut de retour. L’ultime variable selection est mise à jour:
 
-selection = “id2 = 5 or id2 = 6 or type <> ‘Grass’”
+selection = “id2 = 5 or id2 = 6 or type $<$ "Grass"
 
 La requête ultime qui renverra le résultat escompté sera tout simplement :
 
@@ -134,7 +135,10 @@ La requête ultime qui renverra le résultat escompté sera tout simplement :
 
 Soit :
 
-SELECT type1 FROM C4 WHERE id2 = 5 or id2 = 6 or type <> ‘Grass’
+\lstset{language=SQL}
+\begin{lstlisting}
+SELECT type1 FROM C4 WHERE id2 = 5 or id2 = 6 or type $<>$ "Grass"
+\end{lstlisting}
 
 En conclusion, grâce à l’arbre représentant le schéma fédéré, nous arrivons a recréer une requete plus simple, touchant à une unique table,  sans avoir à effectuer de joins, la sélection ayant eu lieu plus tôt grâce aux sous-requêtes.
 
@@ -160,22 +164,20 @@ Présenter l’architecture à l’aide du schéma, et souligner les différence
 
 Comme évoqué plus haut, le “Splitter” exprime les sous-requêtes, à partir de la requête initiale, dans un langage pivot, que tous les “Wrapper” pourront comprendre et traduire en langage source. Ce langage pivot prend la forme d’un objet python, nommé Req. Cet objet correspond au découpage simple d’une requête en 3 éléments :
 
-    - le nom des “colonnes” de projection ;
+\begin{itemize}
+    \item le nom des “colonnes” de projection ;
 
-    - la partie sélection ;
+    \item la partie sélection ;
 
-    - le nom de la table/fichier XML.
-
+    \item le nom de la table/fichier XML.
+\end{itemize}
 
 Un objet Req pourra être instancié de la façon suivante :
 
-Req( [ “name”, “description” ], “@id = 99”, "pokemon" ) // A mettre en code !
-
-/* ** Pour inclure du code et lui donner de la couleur
-
-http://en.wikibooks.org/wiki/LaTeX/Source\_Code\_Listings
-
-*/
+\lstset{language=SQL}
+\begin{lstlisting}
+Req( [ "name", "description"], "@id = 99" "pokemon" )
+\end{lstlisting}
 
 C’est donc cet objet qui sera transmis au bon “Wrapper”, et qui sera traduit en requête pour la source associée.
 
