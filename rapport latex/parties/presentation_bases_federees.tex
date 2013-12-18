@@ -19,13 +19,13 @@ Pour finir, gardons à l’esprit l’existence possible de conflits, de par la 
 
 Afin d’appréhender le fonctionnement général d’une base de données fédérée, étudions le parcours d’une requête simple. Cette requête est émise par l’utilisateur en XQuery et prend la forme suivante :
 
-for $nom in doc()//nom
+for \$nom in doc()//nom
 
-where $nom/..//age > 18
+where \$nom/..//age > 18
 
-return $nom
+return \$nom
 
-Supposons la base de données fédérée comme composée de deux bases : l’une qu’on appellera R1 est une base de données SQL et contient deux colonnes “id” et “nom”, l’autre appelée R2 est une base de données XML et contient des “personnes” possédant un élément “id” et un élément “age”. // Insérer sqlAndXml_simple_example.png
+Supposons la base de données fédérée comme composée de deux bases : l’une qu’on appellera R1 est une base de données SQL et contient deux colonnes “id” et “nom”, l’autre appelée R2 est une base de données XML et contient des “personnes” possédant un élément “id” et un élément “age”. // Insérer sqlAndXml\_simple\_example.png
 
 
 Avec cette requête, l’utilisateur cherche à accéder au nom des personnes présentes dans la base fédérée étant majeures. Elle est effectuée en accord avec un schéma fédéré, qui est défini pour représenter la structure virtuelle de la base de données vue par l’utilisateur.
@@ -52,13 +52,15 @@ Les données sont transmises à travers un certain nombre de couches. Ces couche
 
 Nous utilisons des schémas pour qualifier ces représentations des données propres à chaque couches. Nous utilisons quatre niveaux dans notre étude :
 
-    - Le schéma externe : la représentation des données manipulée par l’utilisateur ;
+\begin{itemize}
+    \item Le schéma externe : la représentation des données manipulée par l’utilisateur ;
 
-    - Le schéma fédéré : la représentation interne des données agrégées ;
+    \item Le schéma fédéré : la représentation interne des données agrégées ;
 
-    - Le schéma composant : la représentation des données communiquée aux sources ;
+    \item Le schéma composant : la représentation des données communiquée aux sources ;
 
-    - Le schéma local : la représentation des données dans les sources.
+    \item Le schéma local : la représentation des données dans les sources.
+\end{itemize}
 
 \subsubsection{Problèmes communs liés aux architectures fédérées}
 
