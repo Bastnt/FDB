@@ -1,24 +1,25 @@
 \documentclass[10pt,a4paper]{report}
 
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage[english]{isodate}
+\usepackage[francais]{babel}
+%\usepackage[english]{isodate}
 \usepackage[parfill]{parskip}
 % pour les images
 \usepackage{graphicx}
+% pour les images eps
+\usepackage{epstopdf}
 % pour la coloration syntaxique
 \usepackage{listings}
 
 \title{Rapport du Projet de BDA-SIM\\Les bases de données fédérées}
-\author{}
 \author{
-	Bastien Berge \\
+	Bastient Berge \\
 	Alban Granger \\
 	Léo Guirinec \\
 	Richard Lagrange \\
-	Chunli Li \\
+	Chunli Li
 	Brendan Masson \\
-	Martin Seillan \\
+	Martin Seillant \\
 }
 %\date{''date de fin de rédaction''} 
 
@@ -56,9 +57,9 @@
 \addcontentsline{toc}{chapter}{Annexes}
 \input{parties/annexes.tex}
 
-\chapter*{Bibliographie}
+\bibliographystyle{plain}
+\bibliography{bibliographie/bibliographie.tex}
 \addcontentsline{toc}{chapter}{Bibliographie}
-\input{parties/bibliographie.tex}
 
 \chapter*{Conclusion}
 \addcontentsline{toc}{chapter}{Conclusion}
