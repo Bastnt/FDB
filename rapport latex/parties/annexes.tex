@@ -38,3 +38,224 @@ Un pokémon peut gagner de l’expérience en mettant K.O. un autre pokémon. Ce
 Les concepts d’expérience, de capacités à oublier pour en apprendre de nouvelles et de “tours” lors des combats sont propres aux jeux plus qu’aux mangas et animes Pokémon.
 
 Enfin, chaque dresseur est équipé d’une encyclopédie appellée “pokédex” lui permettant de collecter des informations sur les pokémon qu’il rencontre. Ce pokédex constitue le bestiaire du monde de pokémon. Chaque pokémon rencontré à un moment donné par le dresseur y sera décrit (type(s), nom, attaques…) et trié dans l’ordre de leur numéro.
+
+\section{B- Schéma externe}
+
+\usepackage{listings, color}
+
+\definecolor{forestgreen}{RGB}{34,139,34}
+\definecolor{orangered}{RGB}{239,134,64}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+
+\lstdefinestyle{XML} {
+   language=XML,
+   extendedchars=true, 
+   breaklines=true,
+   breakatwhitespace=true,
+   emph={},
+   emphstyle=\color{red},
+   basicstyle=\ttfamily,
+   columns=fullflexible,
+   commentstyle=\color{gray}\upshape,
+   morestring=[b]",
+   morecomment=[s]{<?}{?>},
+   morecomment=[s][\color{forestgreen}]{<!--}{-->},
+   keywordstyle=\color{orangered},
+   stringstyle=\ttfamily\color{black}\normalfont,
+   tagstyle=\color{darkblue}\bf,
+   morekeywords={attribute,xmlns,version,type,release},
+}
+
+*/
+
+\begin{lstlisting}[style=XML]
+
+<?xml version="1.0"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+
+
+<element name="pokemonData">
+
+    <complexType>
+
+    <sequence>
+
+        <!-- TEAMS -->
+
+        <element name="teams">
+
+            <complexType>
+
+            <sequence>
+
+                <element name="team" maxOccurs="unbounded">
+
+                    <complexType>
+
+                    <sequence>
+
+                        <element name="trainerName" type="string" />
+
+                        <element name="victoryCounter" type="integer" />
+
+                        <element name="defeatCounter" type="string" />
+
+                        <element name="pokemon" minOccurs="1" maxOccurs="6">
+
+                            <complexType>
+
+                            <sequence>
+
+                                <element name="name" type="string" />
+
+                                <element name="nickname" type="string" />
+
+                                <element name="height" type="string" />
+
+                                <element name="weight" type="string" />
+
+                                <element name="base_experience" type="string" />
+
+                                <element name="type1" type="string" />
+
+                                <element name="type2" type="string" minOccurs="0"/>
+
+                                <element name="move" maxOccurs="4">
+
+                                    <complexType>
+
+                                    <sequence>
+
+                                        <element name="spePhySta" type="string"/>
+
+                                        <element name="power" type="integer" minOccurs="0" />
+
+                                        <element name="accuracy" type="integer" minOccurs="0"/>
+
+                                        <element name="pp" type="integer" />
+
+                                        <element name="description" type="string" minOccurs="0"/>
+
+                                    </sequence>
+
+                                    <attribute name="id" type="string" use="required" />
+
+                                    </complexType>
+
+                                </element>
+
+                            </sequence>
+
+                            <attribute name="id" type="string" use="required" />
+
+                            </complexType>
+
+                        </element>
+
+                    </sequence>
+
+                    <attribute name="id" type="string" use="required" />
+
+                    </complexType>
+
+                </element>
+
+            </sequence>
+
+            </complexType>
+
+        </element>
+
+
+        <!-- MOVES -->
+
+        <element name="moves">
+
+            <complexType>
+
+            <sequence>
+
+                <element name="move" maxOccurs="unbounded">
+
+                    <complexType>
+
+                    <sequence>
+
+                        <element name="spePhySta" type="string"/>
+
+                        <element name="power" type="integer" minOccurs="0" />
+
+                        <element name="accuracy" type="integer" minOccurs="0"/>
+
+                        <element name="pp" type="integer" />
+
+                        <element name="description" type="string" minOccurs="0"/>
+
+                    </sequence>
+
+                    <attribute name="id" type="string" use="required" />
+
+                    </complexType>
+
+                </element>
+
+            </sequence>
+
+            </complexType>
+
+        </element>
+
+        
+
+        <!-- POKEDEX -->
+
+        <element name="pokedex">
+
+            <complexType>
+
+            <sequence>
+
+                <element name="pokemon" maxOccurs="unbounded">
+
+                    <complexType>
+
+                    <sequence>
+
+                        <element name="name" type="string" />
+
+                        <element name="height" type="string" />
+
+                        <element name="weight" type="string" />
+
+                        <element name="type1" type="string" />
+
+                        <element name="type2" type="string" minOccurs="0"/>
+
+                        <element name="base_experience" type="string" />
+
+                    </sequence>
+
+                    <attribute name="id" type="string" use="required" />
+
+                    </complexType>
+
+                </element>
+
+            </sequence>
+
+            </complexType>
+
+        </element>
+
+
+    </sequence>
+
+    </complexType>
+
+</element>
+
+</schema>
+
+\end{lstlisting}
