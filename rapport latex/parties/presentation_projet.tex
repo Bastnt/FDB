@@ -133,7 +133,7 @@ En conclusion, grâce à l'arbre représentant le schéma fédéré, nous arrivo
 
 \subsubsection{Wrapper}
 
-Les sous-requêtes sont exprimées dans un langage pivot, compréhensible par tous les "Wrapper" (voir 3) b) ). Les sous-requêtes sont poussées vers les "Wrapper".
+Les sous-requêtes sont exprimées dans un langage pivot, compréhensible par tous les "Wrapper" (voir la section~\ref{langagePivot}). Les sous-requêtes sont poussées vers les "Wrapper".
 
 Ces derniers reçoivent la requête en langage pivot et commencent par la traduire vers un langage de requête propre à la base, requête SQL pour l'un et requête XQuery pour l'autre. Ils exécutent ensuite la requête auprès de la source de données. Le résultat ainsi produit est ensuite retransformé vers du XML, le langage de retour des "Wrapper". Dans notre cas, l'un des wrappers éxecutant du XQuery, cette transformation est inutile car le résultat est déjà en XML, pour SQL, cependant, cette transformation a bien lieu. Le XML ainsi produit est retourné au "Mediator".
 
@@ -147,9 +147,10 @@ Dans le cadre de notre projet, nous avons décidé d'implémenter une chaîne si
 
 %**** Insérer schéma UML (class\_diagram.eps)****
 
-Présenter l'architecture à l'aide du schéma, et souligner les différences par rapport à ce qui a été présenté dans I.
+Présenter l'architecture à l'aide du schéma, et souligner les différences par rapport à ce qui a été présenté dans le chapitre~\ref{chapterI}.
 
 \subsubsection{Le langage pivot}
+\label{langagePivot}
 
 Comme évoqué plus haut, le "Splitter" exprime les sous-requêtes, à partir de la requête initiale, dans un langage pivot, que tous les "Wrapper" pourront comprendre et traduire en langage source. Ce langage pivot prend la forme d'un objet python, nommé Req. Cet objet correspond au découpage simple d'une requête en 3 éléments :
 

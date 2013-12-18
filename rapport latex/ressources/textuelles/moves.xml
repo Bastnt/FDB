@@ -5600,6 +5600,7 @@
 		<description>Paralyzes opponent.</description>
 	</move>
 
+<!-- ... -->
 	<move id="606">
 		<name>Zen Headbutt</name>
 		<type>Psychic</type>

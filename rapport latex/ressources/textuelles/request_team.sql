@@ -102,6 +102,7 @@ INSERT INTO team VALUES(93, "adeltrude", 23, 47);
 INSERT INTO team VALUES(94, "ademar", 77, 40);
 INSERT INTO team VALUES(95, "adenora", 6, 47);
 INSERT INTO team VALUES(96, "adine", 7, 95);
+--...
 INSERT INTO team VALUES(97, "adolphe", 72, 55);
 INSERT INTO team VALUES(98, "adon", 26, 16);
 INSERT INTO team VALUES(99, "adonis", 33, 39);

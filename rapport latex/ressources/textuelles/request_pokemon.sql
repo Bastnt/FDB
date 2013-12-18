@@ -721,6 +721,7 @@ INSERT INTO pokemon VALUES(712, 'bergmite', 10, 995, 0);
 INSERT INTO pokemon VALUES(713, 'avalugg', 20, 5050, 0);
 INSERT INTO pokemon VALUES(714, 'noibat', 5, 80, 0);
 INSERT INTO pokemon VALUES(715, 'noivern', 15, 850, 0);
+--...
 INSERT INTO pokemon VALUES(716, 'xerneas', 30, 2150, 0);
 INSERT INTO pokemon VALUES(717, 'yveltal', 58, 2030, 0);
 INSERT INTO pokemon VALUES(718, 'zygarde', 50, 3050, 0);
