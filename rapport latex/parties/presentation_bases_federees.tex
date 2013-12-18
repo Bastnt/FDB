@@ -1,6 +1,4 @@
-\section{Présentation des bases de données fédérées}
-
-\subsection{Idée générale}
+\section{Idée générale}
 
 Les bases de données fédérées ont pour but de proposer une vue unique à un ensemble de bases de données de diverses natures. Ces bases de données peuvent être séparées géographiquement. L’utilisateur consulte ainsi les données soumises un modèle unifié et cohérent.
 
@@ -13,7 +11,7 @@ La base de données fédérée se doit aussi d’être extensible, afin de perme
 Pour finir, gardons à l’esprit l’existence possible de conflits, de par la nature même des bases de données fédérées. Ces conflits, directement liés à l’hétérogénéité des différentes bases fédérées, se doivent d’être identifiés et gérés lors de la procédure de fédération. C’est aussi ce genre de difficulté que ce projet nous permettra d’appréhender plus facilement à l’avenir.
 
 
-\subsection{Fonctionnement avec une requête simple}
+\section{Fonctionnement avec une requête simple}
 
 Afin d’appréhender le fonctionnement général d’une base de données fédérée, étudions le parcours d’une requête simple. Cette requête est émise par l’utilisateur en XQuery et prend la forme suivante :
 
@@ -44,9 +42,9 @@ C’est cette fois-ci le module merger du médiateur qui entre en jeu et remplit
 
 Enfin, un helper pourra intervenir en sortie du médiateur pour traduire la réponse dans le langage souhaité.
 
-\subsection{Les bases de données fédérées}
+\section{Les bases de données fédérées}
 
-\subsubsection{Couplage de bases de données}
+\subsection{Couplage de bases de données}
 
 Il existe deux grands types de bases de données fédérées : les bases faiblement couplées et les bases fortement couplées. Nous nous sommes intéressés pour ce projet aux bases de données fédérées faiblement couplées
 
@@ -68,9 +66,9 @@ Nous utilisons des schémas pour qualifier ces représentations des données pro
     \item Le schéma local : la représentation des données dans les sources.
 \end{itemize}
 
-\subsubsection{Problèmes communs liés aux architectures fédérées}
+\subsection{Problèmes communs liés aux architectures fédérées}
 
-La fédération de sources différentes ou distantes pose naturellement des difficultés récurrentes. A partir de l’ouvrage Database Systems, nous avons cherché à étudier et appréhender les problèmes liés à l’architecture fédérée. Ces problèmes peuvent provenir directement des situations suivantes :
+La fédération de sources différentes ou distantes pose naturellement des difficultés récurrentes. A partir de l’ouvrage \textit{Database Systems}\cite{bib:dbsys}, nous avons cherché à étudier et appréhender les problèmes liés à l’architecture fédérée. Ces problèmes peuvent provenir directement des situations suivantes :
 
 \begin{itemize}
     \item hétérogénéité de la communication : différents systèmes reposent généralement sur différents protocoles de communication et ces différents protocoles sont à traiter indépendemment les uns des autres ;
