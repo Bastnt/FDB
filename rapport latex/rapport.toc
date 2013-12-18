@@ -1,2 +1,10 @@
 \select@language {english}
 \select@language {english}
+\contentsline {chapter}{Introduction}{1}
+\contentsline {chapter}{\numberline {1}Pr\IeC {\'e}sentation des bases de donn\IeC {\'e}es f\IeC {\'e}d\IeC {\'e}r\IeC {\'e}es}{2}
+\contentsline {chapter}{\numberline {2}Pr\IeC {\'e}sentation du projet}{3}
+\contentsline {chapter}{\numberline {3}Am\IeC {\'e}liorations envisag\IeC {\'e}es}{4}
+\contentsline {chapter}{\numberline {4}Apports du projet}{5}
+\contentsline {chapter}{Annexes}{6}
+\contentsline {chapter}{Bibliographie}{7}
+\contentsline {chapter}{Conclusion}{8}

@@ -4,7 +4,10 @@
 \usepackage[english]{babel}
 \usepackage[english]{isodate}
 \usepackage[parfill]{parskip}
+% pour les images
 \usepackage{graphicx}
+% pour la coloration syntaxique
+\usepackage{listings}
 
 \title{Rapport du Projet de BDA-SIM\\Les bases de données fédérées}
 \author{}
@@ -30,6 +33,35 @@
 \listoftables
 \newpage
 \pagenumbering{arabic}
+
+\graphicspath{ressources/graphiques}
  
- 
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+\input{parties/introduction.tex}
+
+\chapter{Présentation des bases de données fédérées}
+\input{parties/presentation_bases_federees.tex}
+
+\chapter{Présentation du projet}
+\input{parties/presentation_projet.tex}
+
+\chapter{Améliorations envisagées}
+\input{parties/ameliorations.tex}
+
+\chapter{Apports du projet}
+\input{parties/apports.tex}
+
+\chapter*{Annexes} 
+\addcontentsline{toc}{chapter}{Annexes}
+\input{parties/annexes.tex}
+
+\chapter*{Bibliographie}
+\addcontentsline{toc}{chapter}{Bibliographie}
+\input{parties/bibliographie.tex}
+
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+\input{parties/conclusion.tex}
+
 \end{document}
