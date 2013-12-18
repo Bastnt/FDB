@@ -2,7 +2,7 @@
 
 \subsection{Les différentes bases}
 
-Pour notre projet, nous avons décidé de fédérer deux bases de données hétérogènes : une base de données relationnelles et une base de données XML. Les données présentes dans ces bases modélisent des pokémons. Les pokémons sont des monstres issus de la culture japonaise. Ces pokémons possèdent un ou plusieurs types (feu, eau, plante…) et des compétences. Ils sont possédés par des dresseurs. Ces dresseurs forment des équipes. Une description plus complète de ce contexte est faite en annexe A.
+Pour notre projet, nous avons décidé de fédérer deux bases de données hétérogènes : une base de données relationnelles et une base de données XML. Les données présentes dans ces bases modélisent des pokémons. Les pokémons sont des monstres issus de la culture japonaise. Ces pokémons possèdent un ou plusieurs types (feu, eau, plante…) et des compétences. Ils sont possédés par des dresseurs. Ces dresseurs forment des équipes. Une description plus complète de ce contexte est faite en annexe~\ref{chap:annexeA}.%annexe A
 
 La base SQL possède une table synthétisant certaines des caractéristiques des pokémons.
 \begin{itemize}
@@ -24,7 +24,7 @@ La seconde base de données, la base XML, dispose de 3 fichiers XML : pokémons.
 
 Du point de vue de l'utilisateur, les données issues des différentes bases sont regroupées sous un même modèle appelé schéma externe. Lorsque le client veut accéder à des données, il effectue une requête sur ce modèle. La réponse qu'il obtiendra respectera également le modèle du schéma externe.
 
-Le schéma externe est représenté par le fichier xsd présent en Annexe B.
+Le schéma externe est représenté par le fichier xsd présent en annexe~\ref{chap:annexeB}.
 
 \section{Implémentation de la base de données fédérée}
 
