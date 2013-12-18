@@ -49,7 +49,7 @@ Le schéma est dans le drive : à inclure OK
 
 /* Détails expliqué “tel script a tel rôle et appelle tel script…”*/
 
-Le client, souhaitant interroger son système d’information, lance une requête XQuery. Cette requête ne prend pas en compte la totalité de la syntaxe XQuery mais une limitation assez basique de cette dernière : l’utilisateur peut uniquement effectuer des “for … where … return …” et les requêtes imbriquées ne sont pas gérées. De plus les conditions sont triviales avec toujours un couple variable/valeur (par exemple, where \$var <> “valeur”). Pour ce qui est du return, il renverra tout le temps la variable définie dans le for.
+Le client, souhaitant interroger son système d’information, lance une requête XQuery. Cette requête ne prend pas en compte la totalité de la syntaxe XQuery mais une limitation assez basique de cette dernière : l’utilisateur peut uniquement effectuer des “for … where … return …” et les requêtes imbriquées ne sont pas gérées. De plus les conditions sont triviales avec toujours un couple variable/valeur (par exemple, where \$var $<>$ “valeur”). Pour ce qui est du return, il renverra tout le temps la variable définie dans le for.
 
 \subsubsection{Verifier}
 
@@ -69,20 +69,27 @@ return \$type
 
 La partie for sera analysée et divisée selon son contenu. On se concentre seulement sur la partie xPath de l’expression :
 
-//team[victory > 10]/pokemon/type1
+\lstset{language=SQL}
+\begin{lstlisting}
+team[victory > 10]/pokemon/type1
+\end{lstlisting}
 
 On lui ajoute ensuite la condition de son where en syntaxe xpath en faisant attention à sa position relativement dans le schéma fédéré.
 
-//team[victory > 10]/pokemon/type1[. <> “Grass”]
+\lstset{language=SQL}
+\begin{lstlisting}
+team[victory > 10]/pokemon/type1[. <> "Grass"]
+\end{lstlisting}
 
 On découpe ensuite notre requête en ne gardant que les attributs non virtuels (attributs réellement présents dans une des sous-bases) :
 
-
+\lstset{language=SQL}
+\begin{lstlisting}
 [victory > 10]
 
 
-[. <> “Grass”]
-
+[. <> "Grass"]
+\end{lstlisting}
 
 type1 (valeur de retour, dernier attribut de la clause for)
 
