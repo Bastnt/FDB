@@ -23,7 +23,7 @@ def dealWithBasicElement(parsedString,table):
 	# n-children
 	match = re.search("[\s]+(.+?)\/", parsedString)
 	if match:
-		return re.sub("("+i+")", "$x//\1", parsedString)
+		return re.sub("("+i+")", "$x//\\1", parsedString)
 
 # Deals recursively with the "and" and "or" within the clause
 def dealWithAndOr(parsedString,table):
@@ -43,6 +43,7 @@ def dealWithParenthesis(parsedString,table):
 
 # Converts the python Req into a valid XQuery request
 def fromPythonReqToXQuery(request):
+	re.sub("(.+?)s.xml$", "\\1", request.table)
 	header = "<"+request.table+"s>\n{"
 	footer = "}</"+request.table+"s>"
 
