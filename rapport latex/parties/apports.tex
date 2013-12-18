@@ -1,22 +1,20 @@
-\section{Apports et difficultés}
-
 Ce projet constitue une première expérience enrichissante dans le domaine des bases de données fédérées. Ce domaine est largement répandu dans le milieu des entreprises, puisque les bases de données se font de jour en jour à la fois plus variées et plus nombreuses. Cela nous a donc permis de nous familiariser à la mise en place d’une fédération de plusieurs bases de données différentes, en l’occurrence une base SQL et des fichiers XML.
 
 La vastitude du sujet, et le court temps disponible à sa réalisation nous ont amenés à faire des choix, notamment en simplifiant et évitant en pratique différents problèmes liés à cette fédération. Cela nous a permis d’obtenir une vue globale de ce qu’est la fédération de bases de données. Pour autant, nous n’avons pas pour autant mis de côté l’aspect des conflits et difficultés liés à l’hétérogénéité de la base fédérée, et que nous avons décrit plus tôt. Nous avons donc acquis une connaissance générale des bases de données fédérées et des difficultés qui leur sont associées.
 
 Malgré le temps imparti, et les conflits et difficultés de la fédération qui ont fait l’objet d’une autre partie de ce rapport, nous avons tenu à relever certains aspects et obstacles notables rencontrés lors du développement des différents modules du système fédéré.
 
-\subsection{Verifier}
+\section{Verifier}
 
 En entrée du système fédéré, nous avons besoin de contrôler les requêtes XQuery de l’utilisateur pour éviter toute erreur dans l’application. Cependant, il n’existe pas d’outil immédiat pour vérifier la validité d’une requête XQuery au niveau de ses chemins XPath.
 
 Nous avons pu contourner le problème en convertissant les chemins dans les documents en chemins dans des schémas XSD. Ainsi, il est alors possible de vérifier la validité de ces chemins grâce à ces schémas.
 
-\subsection{Splitter}
+\section{Splitter}
 
 L’une des difficultés majeures rencontrées lors du développement du splitter a été le traitement des clauses where et la création de l’objet Req. Comme précisé en amont, nous avons sous-diviseés les requêtes en un objet python, Req, que nous voulions le plus simple possible. L’un des principaux avantages de cet objet est qu’il facilite la création des wrappers, le principal problème résultant est qu’il complique le travail du splitter, à qui revient la charge importante de bien discerner les sous-requêtes. Trouver la bonne représentation pour cet objet n’a pas été aisé et la classe Req est passée par différents états avant d’arriver à une solution satisfaisante. L’objet finale est composé d’un tableau regroupant les “colonnes” de la projection, d’une chaîne de caractère représentant la sélection et d’un nom de la table, ou du fichier, considéré. Ces éléments représentent des points communs à toutes les requêtes et pour tous nos types de bases de données. Cet objet se veut le plus généraliste possible pour ne pas être redesigné à chaque ajout d’une nouvelle source de données, par exemple des fichiers Excel.
 
-\subsection{Merger}
+\section{Merger}
 
 Le rôle du merger est, comme expliqué plus tôt, de joindre les différentes réponses obtenues auprès de chaque source, afin de répondre correctement à la requête initiale. Chaque réponse aux sous-requêtes étant donnée en XML, il nous faut donc, au sein du Merger, joindre ces réponses XML en une seule.
 

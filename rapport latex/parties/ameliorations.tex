@@ -1,23 +1,21 @@
-\section{Améliorations envisagées}
-
 Nous allons maintenant présenter les différentes améliorations à apporter à notre architecture. En effet, notre projet ayant un intérêt d’abord pédagogique, nous avons simplifié plusieurs aspects. Cette partie liste et décrit les possibles pistes d’améliorations.
 
-\subsection{Extension du langage de requête}
+\section{Extension du langage de requête}
 
 Comme nous l’avons expliqué, notre langage permet tout simplement de faire des accès aux bases avec des possibles conditions. Ce langage est donc assez basique. La première piste d’améliorations serait d’étendre le langage pivot. En plus de pouvoir consulter la base, l’utilisateur pourra faire des mises à jour et ordonner les résultats de ses requêtes. Ces fonctionnalités sont primordiales pour une système d’informations.
 
-\subsection{Extension de la fédération}
+\section{Extension de la fédération}
 
 Bien que notre projet ne comportait que deux sources de stockages, il est tout à fait possible d’ajouter de nouvelles sources comme des bases de données graphes, des fichiers CSV, etc. Cela aura comme effet d’augmenter le nombre de wrappers qui seront propres à chaque nouvelle source. Le schéma fédéré sera également plus important car les nouvelles sources impliqueront de nouvelles données.
 
-\subsection{ Mise en cache des requêtes fréquentes}
+\section{ Mise en cache des requêtes fréquentes}
 
 Il serait avantageux de pouvoir mettre en cache les résultats des requêtes les plus fréquentes à tous les niveaux de l’architecture pour gagner en vitesse. Puisque les différents niveaux communiquent entre eux avec XML et XQuery, ils peuvent indépendemment mettre en cache des données ce qui éviterait de solliciter les sources et éviter des entrées-sorties. Ceci aurait pour potentielle conséquence négative des problèmes d’incohérences de données, par exemple si des mises à jour ont lieu et que les données mises en cache n’ont pas été mises à jour contemporainement. Cette proposition est donc à préférer pour des données peu fréquemment modifiées. Dans notre exemple cela pourrait s’appliquer aux fichiers “moves.xml”, “pokemon.xml” et à la table “pokemon”, en effet, ces données sont plus de l’ordre des métadonnées que de réelles données et sont très peu soumises à des mises à jour.
 
-\subsection{Parallélisation et découplage}
+\section{Parallélisation et découplage}
 
 L’architecture actuelle souffre de goulets d’étranglements au niveau des entrées-sorties. Nous gagnerions grandement en vitesse d’exécution si les différentes parties étaient parallélisées. Il serait possible de traiter les requêtes en flux tendu en implémentant des systèmes de producteurs/consommateurs ce qui permettrait d’obtenir des résultats avant que la requête n’ait  fini. Cela aura pour autre avantage d’alléger la taille en mémoire de l'application à un instant donné puisque chaque partie stockerait uniquement ce dont elle a besoin pour travailler.
 
-\subsection{Jointures croisées déléguées aux sources}
+\section{Jointures croisées déléguées aux sources}
 
 Dans l’architecture actuelle, les jointures qui s’effectuent entre différentes sources sont calculées à l’intérieur même du médiateur. Cela engendre de nombreux aller-retours entre ces sources. Une gestion plus judicieuse serait de transformer les requêtes de telle sorte à déléguer au maximum les tâches de jointure aux sources pour profiter des avantages de la localité des données.
