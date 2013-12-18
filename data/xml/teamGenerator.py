@@ -27,3 +27,5 @@ for i in range(0,100):
 # Writing of the file
 tree = ET.ElementTree(root)
 tree.write("teams.xml")
+
+# Do not forget to add the header then : <?xml version="1.0" encoding="utf-8"?>
