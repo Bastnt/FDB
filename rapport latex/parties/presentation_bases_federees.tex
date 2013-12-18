@@ -6,8 +6,6 @@ Les bases de données fédérées ont pour but de proposer une vue unique à un 
 
 Cette problématique intervient particulièrement lors de la fusion de systèmes d’information, voire d’entreprises, lorsqu’on souhaite associer des bases de données différentes sans pour autant les regrouper dans une base unique et homogène, ce qui aurait un coût très important.
 
-(schéma optionnel <schéma du cours ?>)
-
 L’accès aux données et leurs mises à jour se font via un langage unique, ce qui donne une certaine transparence, puisque l’utilisateur ne se préoccupe pas de savoir dans quelles bases se trouvent les données qu’il souhaite et quel est le langage à appliquer pour les récupérer.
 
 La base de données fédérée se doit aussi d’être extensible, afin de permettre l’intégration de nouvelles bases, possiblement utilisant encore une technologie différente. De plus, chaque base est rendue autonome, ce qui va dans le sens de l’extensibilité. Enfin, la base de données fédérées est avant tout une base de données, et doit remplir son rôle en gardant en tête les contraintes de performances, aspect important des bases de données.
@@ -27,7 +25,13 @@ where $nom/..//age > 18
 return $nom
 \end{verbatim}
 
-Supposons la base de données fédérée comme composée de deux bases : l’une qu’on appellera R1 est une base de données SQL et contient deux colonnes “id” et “nom”, l’autre appelée R2 est une base de données XML et contient des “personnes” possédant un élément “id” et un élément “age”. // Insérer sqlAndXml\_simple\_example.png
+Supposons la base de données fédérée comme composée de deux bases : l’une qu’on appellera R1 est une base de données SQL et contient deux colonnes “id” et “nom”, l’autre appelée R2 est une base de données XML et contient des “personnes” possédant un élément “id” et un élément “age”. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ressources/graphiques/xmlAndSql_simple_example.png}
+    \caption{Exemple simplifié d'une base fédéré}
+\end{figure}
 
 
 Avec cette requête, l’utilisateur cherche à accéder au nom des personnes présentes dans la base fédérée étant majeures. Elle est effectuée en accord avec un schéma fédéré, qui est défini pour représenter la structure virtuelle de la base de données vue par l’utilisateur.

@@ -48,7 +48,7 @@ Chaque fonctionnalité est codée dans un fichier portant le nom de la fonctionn
     \caption{Schéma général de l'architecture du projet}
 \end{figure}
 
-Le client, souhaitant interroger son système d'information, lance une requête XQuery. Cette requête ne prend pas en compte la totalité de la syntaxe XQuery mais une limitation assez basique de cette dernière : l'utilisateur peut uniquement effectuer des "for … where … return …" et les requêtes imbriquées ne sont pas gérées. De plus les conditions sont triviales avec toujours un couple variable/valeur (par exemple, $where \$var <> "valeur"$). Pour ce qui est du return, il renverra tout le temps la variable définie dans le for.
+Le client, souhaitant interroger son système d'information, lance une requête XQuery. Cette requête ne prend pas en compte la totalité de la syntaxe XQuery mais une limitation assez basique de cette dernière : l'utilisateur peut uniquement effectuer des "for … where … return …" et les requêtes imbriquées ne sont pas gérées. De plus les conditions sont triviales avec toujours un couple variable/valeur (par exemple, where \$var $<> "valeur"$). Pour ce qui est du return, il renverra tout le temps la variable définie dans le for.
 
 \subsubsection{Verifier}
 
