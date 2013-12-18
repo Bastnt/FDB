@@ -49,7 +49,7 @@ Le schéma est dans le drive : à inclure OK
 
 /* Détails expliqué “tel script a tel rôle et appelle tel script…”*/
 
-Le client, souhaitant interroger son système d’information, lance une requête XQuery. Cette requête ne prend pas en compte la totalité de la syntaxe XQuery mais une limitation assez basique de cette dernière : l’utilisateur peut uniquement effectuer des “for … where … return …” et les requêtes imbriquées ne sont pas gérées. De plus les conditions sont triviales avec toujours un couple variable/valeur (par exemple, where $var <> “valeur”). Pour ce qui est du return, il renverra tout le temps la variable définie dans le for.
+Le client, souhaitant interroger son système d’information, lance une requête XQuery. Cette requête ne prend pas en compte la totalité de la syntaxe XQuery mais une limitation assez basique de cette dernière : l’utilisateur peut uniquement effectuer des “for … where … return …” et les requêtes imbriquées ne sont pas gérées. De plus les conditions sont triviales avec toujours un couple variable/valeur (par exemple, where \$var <> “valeur”). Pour ce qui est du return, il renverra tout le temps la variable définie dans le for.
 
 \subsubsection{Verifier}
 
@@ -98,7 +98,7 @@ Légende (losange : attribut virtuel, rond : attribut réel, note : cluster où 
 
 Dans la première étape, il nous faut relier victory et type1. On utilise un algorithme de décision qui nous donnera la jointure à faire pour relier deux “clusters” (cluster = une table de base ou un fichier xml /* en footnote */). Ici on relie C4 et C1. L’algorithme nous donnera la démarche à suivre pour tout relier.
 
-C1 --id1→ C2 --id2→  C4
+$C1 --id1 \rightarrow C2 --id2 \rightarrow  C4$
 
 En supposant que ces clusters soient tous dans des bases SQL, on fait les deux sous-requêtes suivantes pour joindre victory et type1 :
 
@@ -145,7 +145,7 @@ Dans le cadre de notre projet, nous avons décidé d’implémenter une chaîne 
 
 \subsubsection{L’architecture globale}
 
-**** Insérer schéma UML (class_diagram.eps)****
+%**** Insérer schéma UML (class\_diagram.eps)****
 
 Présenter l’architecture à l’aide du schéma, et souligner les différences par rapport à ce qui a été présenté dans I.
 
@@ -166,7 +166,7 @@ Req( [ “name”, “description” ], “@id = 99”, "pokemon" ) // A mettre 
 
 /* ** Pour inclure du code et lui donner de la couleur
 
-http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+http://en.wikibooks.org/wiki/LaTeX/Source\_Code\_Listings
 
 */
 
