@@ -8,45 +8,94 @@ from models import *
 # en différentes sous-requêtes, avant d'interroger les bases
 # via les wrappers
 
+header = """<?xml version="1.0" encoding="UTF-8"?>"""
+
 def main(request):
-	my_schema = schema()
+	parse_cursor = schema()
 
 	# Parsing du XQ
-	ex = """for $var in doc("")//pokemon/name//nickname[../@id>10]
-			where $var/../@id = 12
+	ex = """for $var in doc("")//trainerName[. <> 'p']/../@id
 			return $var
 	"""
+	# We catch the xpath part of the for clause
+	for_content = parse("for.+?\)(.+?)\n|where", ex)
+	# We catch the condition part of the where clause
+	where_content = parse("where\s+\$\w+(.+?)\n|return", ex)
 
-	attribute_mask = re.compile("for.+?(//?[@A-Za-z0-9]+(\[.+?\])?)+")
+	# We append the where_content to the xpath of the for_content in order
+	# to just have a one line xpath query to resolve
+	if where_content != None:
+		for_content += "[."+where_content+"]"
 
-	ans = attribute_mask.search(ex)
+	# get the last Node of the path, the one to return
+	returnNode, conditionList = parse_xpath(parse_cursor, for_content)
+	if returnNode == None:
+		return empty_result()
 
-	print(ans.group(1))
-	print(ans.group(2))
-	print(ans.group(3))
+		# Here are the results of the complete parsing
+	print("\nreturn: "+returnNode.name)
+	print("condition: "+str(conditionList))
 
 
+	# We now call the decision algorithm
+	print("\nJoins: ")
+	for c in conditionList:
+		print(join_decision(returnNode, c.node))
+
+def join_decision(node1, node2):
+	return node1.name + " --> " + node2.name
+
+def parse_xpath(cursor, expression):
+	# The conditions to apply
+	conditions = []
+
+	# We put all the attributes and the [conditions] in a list representing a full path
+	full_path = re.findall("//?[@\w\.]+|\[.+?\]", expression)
+
+	print("Analyse: ", full_path)
+
+	for a in full_path:
+		token = re.search("(//?|\[)(.+?)\]?$", a)
+		try:
+			type = token.group(1)
+			name = token.group(2)
+		except:
+			print("Error in splitting a xpath token in: "+a)
+			exit()
+
+		if type == "[":
+			c = re.search("^([\w@\.]+)(.+)$", name)
+			n, _ = parse_xpath(cursor, c.group(1))
+			conditions.append(Condition(n, c.group(2)))
 
 
-	print("The request to split: ")
-	print(request)
+		if name == "..":
+			cursor = cursor.parent
+			continue
+		elif name == ".":
+			continue
 
-	# === Example non automated: ===
-	ages = my_schema.find_all("age")
-	print("We can find 'age' in the following databases: ")
-	for age in ages:
-		for wrapper in age.wrappers:
-			print("-", wrapper.name)
+		if type == "//":
+			node = cursor.findall(name)
+		elif type == "/":
+			node = cursor.find(name)
 
-	ids = my_schema.find_all_attributes("id")
-	print("We can find '@id' in the following databases: ")
-	for id in ids:
-		for wrapper in id.wrappers:
-			print("-", wrapper.name)
+		if not node:
+			return None, []
+		cursor = node
 
-	# They are on the same database, so the request will be:
-	req = Req(["age"], "id > 1", "pokemon.db")
-	ages[0].wrappers[0].execute(req)
+	if(isinstance(cursor, Node)):
+		return None, []
+	else:
+		return cursor, conditions
+
+def empty_result():
+	return header+"<results />"
+
+def parse(mask, string):
+	found = re.search(mask, string)
+	assert found != None, ("Error while parsing:\n"+string)
+	return found.group(1)
 
 if __name__ == "__main__":
 	main()

@@ -43,26 +43,19 @@ def dealWithParenthesis(parsedString,table):
 
 # Converts the python Req into a valid XQuery request
 def fromPythonReqToXQuery(request):
-	re.sub("(.+?)s.xml$", "\\1", request.table)
-	header = "<"+request.table+"s>\n{"
-	footer = "}</"+request.table+"s>"
+	header = "<"+request.table+">\n{"
+	footer = "}</"+request.table+">"
 
-	forPart = "for $x in doc(\""+db_path+request.table+"s.xml\")//"+request.table+"\n"
+	forPart = "for $x in doc(\""+db_path+request.table+".xml\")//"+request.projection+"\n"
 	
 	if request.selection=="":
 		wherePart=""
 	else:
 		wherePart = " where "+dealWithParenthesis(request.selection,request.table)+"\n"
-	
-	if len(request.projection)==0:
-		returnPart = " return $x"
-	else: 
-		returnPart = " return \n<"+request.table+" id=\"{$x/@id}\">\n\t{"
-		for i in request.projection:
-			returnPart += "$x/"+i+", " 
-		returnPart = returnPart[:-2]
-		returnPart += "}\n</"+request.table+">\n"
 
+	returnPart = " return $x"
+
+	print(header+forPart+wherePart+returnPart+footer)
 	return header+forPart+wherePart+returnPart+footer;
 
 def execute(request):

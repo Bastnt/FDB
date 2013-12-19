@@ -2,10 +2,15 @@ from tree import Node, Attribute, Leaf
 from wrapper import xml_wrapper, sql_wrapper
 
 class Req:
-	def __init__(self, projection = [], selection = "", table = ""):
+	def __init__(self, projection = "", selection = "", table = ""):
 		self.projection = projection
 		self.selection = selection
 		self.table = table
+
+class Condition:
+	def __init__(self, node, condition):
+		self.node = node
+		self.condition = condition
 
 class Cluster:
 	def __init__(self, origin, table, wrapper_execute_pointer):

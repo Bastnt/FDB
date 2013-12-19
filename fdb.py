@@ -12,11 +12,11 @@ def execute(request):
 	#mediator.splitter.main(request)
 	s = schema()
 	mediator.splitter.main("")
+	# print(s.findall("trainerName").name)
 
 
 	# Tests
-	#print(xml_wrapper.execute(Req(['name'], "", "moves.xml")))
+	#print(xml_wrapper.execute(Req("type55", "", "moves")))
 
 if __name__ == "__main__":
-	request = Req(["type"],"power >= 40","move")
-	print(xml_wrapper.execute(request))
+	execute("")

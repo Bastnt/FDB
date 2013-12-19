@@ -9,19 +9,17 @@ class Tree:
 		if(parent):
 			parent.children.append(self)
 
-	# Find a child with this name
-	def find(self, name):
-		if name == self.name:
-			return self
-
 	# Find all the children with this name at any depth
-	def find_all(self, name):
+	def findall(self, name):
 		result = []
-		self.rec_find_all(name, result)
-		return result
+		self.rec_findall(name, result)
+		if len(result) > 0:
+			return result[0]
+		else:
+			return None
 
 	# don't use this
-	def rec_find_all(self, name, result):
+	def rec_findall(self, name, result):
 		if(self.name == name):
 			result.append(self)
 
@@ -31,12 +29,14 @@ class Node(Tree):
 		self.children = []
 
 	def find(self, name):
-		for c in children:
-			c.find(name)
-
-	def rec_find_all(self, name, result):
 		for c in self.children:
-			c.rec_find_all(name, result)
+			if c.name == name:
+				return c
+
+	def rec_findall(self, name, result):
+		Tree.rec_findall(self, name, result)
+		for c in self.children:
+			c.rec_findall(name, result)
 
 
 class Leaf(Tree):
@@ -46,12 +46,14 @@ class Leaf(Tree):
 		self.attributes = []
 
 	def find(self, name):
-		for a in attributes:
-			a.find(name)
-
-	def rec_find_all(self, name, result):
 		for a in self.attributes:
-			a.rec_find_all(name, result)
+			if a.name == name:
+				return a
+
+	def rec_findall(self, name, result):
+		Tree.rec_findall(self, name, result)
+		for a in self.attributes:
+			a.rec_findall(name, result)
 
 class Attribute(Tree):
 	def __init__(self, parent, name, wrappers=[]):
