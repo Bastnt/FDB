@@ -26,7 +26,7 @@ def build_edge_list_from_node(node) :
 		if  isinstance(child, Leaf) :
 			edge_list.extend(child.attributes)
 		else :
-			edge.list.extend(build_edge_list_from_node(child)
+			edge.list.extend(build_edge_list_from_node(child))
 			
 	return edge_list
 	
@@ -51,7 +51,7 @@ def find_join_path(root, tree1, tree2) :
 		
 		for edge in edge_list_of_cluster :
 			if edge.node not in cluster_ancestor_of_node :
-				cluster_ancestor_of_node(edge.node) = cluster
+				cluster_ancestor_of_node[edge.node] = cluster
 				
 				node_list.append(edge.node)
 				
@@ -60,7 +60,7 @@ def find_join_path(root, tree1, tree2) :
 			
 			for edge in edge_list_of_node :
 				if edge.cluster not in node_ancestor_of_cluster :
-					node_ancestor_of_cluster(edge.cluster)
+					node_ancestor_of_cluster[edge.cluster] = edge.node
 					
 					cluster_list.append(edge.cluster)
 		
@@ -77,9 +77,9 @@ def find_join_path(root, tree1, tree2) :
 		
 		cluster_it = cluster_ancestor_of_node(node_it)
 		
-		if cluster_it = cluster_start
+		if cluster_it == cluster_start :
 			eureka = True
-		else
+		else :
 			join_cluster_list.append(cluster_it)
 		
 	return (join_cluster_list, join_node_list)
