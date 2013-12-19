@@ -1,129 +1,86 @@
 #!/usr/local/bin/python
-    
-class Edge :
-  def __init__(self, concept, source, value) :
-    self.concept = concept
-    self.source = source
-    self.value = value
-    
-  def match_source(self, source) :
-    return self.source == source
-    
-  def __eq__(self, other) :
-    return (self.concept == other.concept) and (self.source == other.source)
-    
-  def __hash__(self) :
-    return hash(self.concept) + hash(self.source)
 
-  def __repr__(self) :
-    return self.concept, self.source, self.value
-    
-class Match :
-  def __init__(self, source1, value1, source2, value2) :
-    self.source1
-    self.value1
-    self.source2
-    self.value2
-    
-  def __repr__(self) :
-    return self.source1, self.value1, self.source2, self.value2
+from tree import Node, tree, Leaf
+
+class Edge :
+	def _init(self, leaf, cluster) :
+		sef.leaf = leaf
+		self.cluster = cluster
+		
+	def __eq__(self, other) :
+		return (sef.leaf == sef.leaf) and (self.cluster == other.cluster)
+		
+	def __hash__(self) :
+		return hash(sef.leaf) + hash(self.cluster)
 	
 
-class MatchingGraph :
-  edges = []
-  
-  def add_edge(self, concept, source, value) :
-    self.edges.append(Edge(concept, source, value))
-  
-  def filter_by_source(self, source) :
-    images = [edge for edge in self.edges if edge.match_source(source)]
-    return set(images)
-    
-  def find_match(self, source1, source2) :
-    edge_set1 = self.filter_by_source(source1)
-    edge_set2 = self.filter_by_source(source2)
-    edge_set = {edge for egde in edge_set1 ^ edge_set2}
-    
-    match_list = []
-    for edge1 in edge_set1 :
-      for edge2 in edge_set2 :
-        if edge1.source == edge2.source :
-          match_list.append(Match(edge1.source, edge1.value, edge2.source, edge2.value))
-    
-    return match_list
-    
-mg = MatchingGraph()
-mg.add_edge("a", "A", "Aa")
-mg.add_edge("b", "A", "Ab")
-mg.add_edge("b", "B", "Bb")
-mg.add_edge("c", "B", "Bc")
-print mg.find_match("A", "B")[0].value1
+def filter_edges_with_node(edge_list, node) :
+	return [edge for edge in edge_list if edge.node == node]
 
+def filter_edges_with_cluster(edge_list, cluster) :
+	return [edge for edge in edge_list if edge.cluster == cluster]
 
-#!/usr/local/bin/python2.7
-    
-class Edge :
-  def __init__(self, concept, source, value) :
-    self.concept = concept
-    self.source = source
-    self.value = value
-    
-  def match_source(self, source) :
-    return self.source == source
-    
-  def __eq__(self, other) :
-    return (self.concept == other.concept) and (self.source == other.source)
-    
-  def __hash__(self) :
-    return hash(self.concept) + hash(self.source)
-
-  def __repr__(self) :
-    return repr((self.concept, self.source, self.value))
-    
-class Match :
-  def __init__(self, source1, value1, source2, value2) :
-    self.source1 = source1
-    self.value1  = value1
-    self.source2 = source2
-    self.value2  = value2
-    
-  def __repr__(self) :
-    return repr((self.source1, self.value1, self.source2, self.value2))
-  
-
-class MatchingGraph :
-  edges = []
-  
-  def add_edge(self, concept, source, value) :
-    self.edges.append(Edge(concept, source, value))
-  
-  def filter_by_source(self, source) :
-    images = [edge for edge in self.edges if edge.match_source(source)]
-    return set(images)
-    
-  def find_match(self, source1, source2) :
-    edge_set1 = self.filter_by_source(source1)
-    edge_set2 = self.filter_by_source(source2)
-    edge_set = {edge for edge in edge_set1 ^ edge_set2}
-    
-    print edge_set1
-    print edge_set2
-    
-    match_list = []
-    for edge1 in edge_set1 :
-      for edge2 in edge_set2 :
-        if edge1.concept == edge2.concept :
-          match_list.append(Match(edge1.source, edge1.value, edge2.source, edge2.value))
-    
-    return match_list
-    
-mg = MatchingGraph()
-mg.add_edge("a", "A", "Aa")
-mg.add_edge("b", "A", "Ab")
-mg.add_edge("b", "B", "Bb")
-mg.add_edge("c", "B", "Bc")
-print mg.find_match("A", "B")
-    
-# set([('a', 'A', 'Aa'), ('b', 'A', 'Ab')])
-# set([('c', 'B', 'Bc'), ('b', 'B', 'Bb')])
-# [('A', 'Ab', 'B', 'Bb')]
+def build_edge_list_from_node(node) :
+	edge_list = []
+	for child in node.children :
+		if child isinstance Leaf :
+			edge_list.extend(child.attributes)
+		else :
+			edge.list.extend(build_edge_list_from_node(child)
+	return edge_list
+	
+	
+def find_join_path(root, tree1, tree2) :
+	edge_list = build_edge_list_from_node(root)
+	
+	cluster_start = tree1.attributes[0]
+	cluster_end   = tree2.attributes[0]
+	
+	cluster_list  = cluster_start
+	node_list     = []
+	
+	cluster_ancestor_of_node = dict() # node -> cluster
+	node_ancestor_of_cluster = dict() # cluster -> node
+	
+	while not len(cluster_list) > 0 :
+		
+		cluster = cluster_list.pop()
+		
+		edge_list_of_cluster = filter_edges_with_cluster(edge_list, cluster)
+		
+		for edge in edge_list_of_cluster :
+			if edge.node not in cluster_ancestor_of_node :
+				cluster_ancestor_of_node(edge.node) = cluster
+				
+				node_list.append(edge.node)
+				
+		for node in node_list :
+			edge_list_of_node = filter_edges_with_node(edge_list, node)
+			
+			for edge in edge_list_of_node :
+				if edge.cluster not in node_ancestor_of_cluster :
+					node_ancestor_of_cluster(edge.cluster)
+					
+					cluster_list.append(edge.cluster)
+		
+	join_cluster_list = [cluster.end]
+	join_node_list = []
+	cluster_it = cluster.end
+	node_it = None
+	
+	eureka = False
+	
+	while not eureka :
+		node_it = node_ancestor_of_cluster(cluster_it)
+		join_node_list.append(node_it)
+		
+		cluster_it = cluster_ancestor_of_node(node_it)
+		
+		if cluster_it = cluster_start
+			eureka = True
+		else
+			join_cluster_list.append(cluster_it)
+		
+	return (join_cluster_list, join_node_list)
+		
+	
