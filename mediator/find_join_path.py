@@ -1,4 +1,4 @@
-#!/usr/local/bin/python2.7
+#!/usr/local/bin/python
     
 class Edge :
   def __init__(self, concept, source, value) :
