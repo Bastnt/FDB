@@ -10,21 +10,18 @@ from models import *
 
 header = """<?xml version="1.0" encoding="UTF-8"?>"""
 
-def main(request):
+def main(simplified_request):
 	parse_cursor = schema()
 
 	# Parsing du XQ
-	ex = """for $var in doc("")//trainerName[. <> 'p']/../@id
-			return $var
-	"""
+
 	# We catch the xpath part of the for clause
-	for_content = parse("for.+?\)(.+?)\n|where", ex)
 	# We catch the condition part of the where clause
-	where_content = parse("where\s+\$\w+(.+?)\n|return", ex)
+	for_content, where_content = simplified_request
 
 	# We append the where_content to the xpath of the for_content in order
 	# to just have a one line xpath query to resolve
-	if where_content != None:
+	if where_content != "":
 		for_content += "[."+where_content+"]"
 
 	# get the last Node of the path, the one to return
