@@ -2,7 +2,7 @@
 
 \subsection{Les différentes bases}
 
-Pour notre projet, nous avons décidé de fédérer deux bases de données hétérogènes : une base de données relationnelles et une base de données XML. Les données présentes dans ces bases modélisent des pokémons. Les pokémons sont des monstres issus de la culture japonaise. Ces pokémons possèdent un ou plusieurs types (feu, eau, plante…) et des compétences. Ils sont possédés par des dresseurs. Ces dresseurs forment des équipes. Une description plus complète de ce contexte est faite en annexe~\ref{chap:annexeA}.%annexe A
+Pour notre projet, nous avons décidé de fédérer deux bases de données hétérogènes : une base de données relationnelles et une base de données XML. Les données présentes dans ces bases modélisent des pokémons. Les pokémons sont des monstres issus de la culture japonaise. Ces pokémons possèdent un ou plusieurs types (feu, eau, plante…) et des compétences. Ils sont possédés par des dresseurs. Ces dresseurs forment des équipes. Une description plus complète de ce contexte est faite en annexe~\ref{chap:annexeB}.%annexe A
 
 La base SQL possède une table synthétisant certaines des caractéristiques des pokémons.
 \begin{itemize}
@@ -24,7 +24,7 @@ La seconde base de données, la base XML, dispose de 3 fichiers XML : pokémons.
 
 Du point de vue de l'utilisateur, les données issues des différentes bases sont regroupées sous un même modèle appelé schéma externe. Lorsque le client veut accéder à des données, il effectue une requête sur ce modèle. La réponse qu'il obtiendra respectera également le modèle du schéma externe.
 
-Le schéma externe est représenté par le fichier xsd présent en annexe~\ref{chap:annexeB}.
+Le schéma externe est représenté par le fichier xsd présent en annexe~\ref{chap:annexeC}.
 
 \section{Implémentation de la base de données fédérée}
 
@@ -137,6 +137,7 @@ Les sous-requêtes sont exprimées dans un langage pivot, compréhensible par to
 
 Ces derniers reçoivent la requête en langage pivot et commencent par la traduire vers un langage de requête propre à la base, requête SQL pour l'un et requête XQuery pour l'autre. Ils exécutent ensuite la requête auprès de la source de données. Le résultat ainsi produit est ensuite retransformé vers du XML, le langage de retour des "Wrapper". Dans notre cas, l'un des wrappers éxecutant du XQuery, cette transformation est inutile car le résultat est déjà en XML, pour SQL, cependant, cette transformation a bien lieu. Le XML ainsi produit est retourné au "Mediator".
 
+\subsubsection{Merger}
 C'est le "Merger" qui continue le traitement de la requête au sein du "Mediator". La particularité des "Wrapper" est d'envoyer au "Merger" le même type de données. Cependant des informations peuvent correspondre au sein de ses données. Le rôle du "Merger" est de traiter ces données apparemment hétérogènes et d'en effectuer les liaisons, lorsque cela est judicieux. Dans notre modèle de données par exemple, les informations propres à une espèce de pokémon sont séparées et se trouvent à la fois dans un fichier XML (ses types) et dans une table SQL (son poids, sa taille, etc.). Lorsque l'utilisateur veut des données générales sur un pokémon donné (donc un "id" donné), le "Merger" devra ici joindre les deux parties de l'information par rapport à l'id. 
 
 \subsection{Architecture et adaptations}
@@ -173,13 +174,19 @@ Notons que dans le cadre de ce projet, cet objet a été allégé au mieux : il 
 \subsection{Modules et fichiers}
 
 \subsubsection{"models.py"}
-
-Ce fichier décrit le schéma fédéré, via la fonction schema(), et deux des classes majeures du programme : Req et Cluster. La classe Req décrit l'objet de requête envoyé aux différents aux wrappers et la classe Cluster représente un ensemble "table/fichier" et "wrapper" qui correspond à un objet interrogé.
-
-\subsubsection{"fdb.py"}
-
-Ce fichier est le fichier "main" et est en ce sens le point d'entrée du système.
+Ce fichier décrit le schéma fédéré, via la fonction schema(), et deux des classes majeures du programme : Req et Cluster. La classe Req décrit l'objet de requête envoyé aux différents wrappers et la classe Cluster représente un ensemble "table/fichier" et "wrapper" qui correspond à un objet interrogé.
 
 \subsubsection{"fdb.py"}
+Ce fichier est le fichier "main". Il est en ce sens le point d'entrée du système.
 
-Ce fichier comporte une fonction merge qui réalise la "jointure" entre les résultats des sous-requêtes. Cette fonction attend en paramètre un fichier xml qui est lui-même une concaténation des deux fichiers xml à joindre, un XSLT, qui est le XSLT effectuant le merge et le résultat sera stocké dans le troisième paramètre.
+\subsubsection{"splitter.py"}
+Ce fichier effectue le gros du travail concernant la requête reçue de l'utilisateur, en la scindant en sous-requêtes, comme décrit précédemment.
+
+\subsubsection{"merger.py"}
+Ce fichier comporte une fonction merge qui réalise la "jointure" entre les résultats des sous-requêtes. Cette fonction attend en paramètre un fichier xml qui contiendra les deux fichiers xml à joindre, un XSLT, qui est le XSLT effectuant le merge et le résultat sera stocké dans le troisième paramètre.
+
+\subsubsection{"sql\_wrapper.py"}
+Ce fichier, comme son nom l'indique, est le wrapper SQL. Une première fonction importante est fromPythonReqToSQL qui prend l'objet Req envoyé par le médiateur et renvoie une requête SQL simple correspondant à cet objet.  La fonction getSQLResult effectue la requête sur la base et la fonction fromSQLAnswerToXML renvoie au final le XML.
+
+\subsubsection{"xml\_wrapper.py"}
+Ce fichier, comme son nom l'indique, est le wrapper XML. Des fonctions traitent récursivement la clause where de l'objet Req pour ajouter des \$ x là où ils sont nécessaires. La fonction fromPythonReqToXQuery transforme l'objet Req en requête XQuery, qui est ensuite exécutée en appelant zorba, le processeur de XQuery que nous utilisons.
