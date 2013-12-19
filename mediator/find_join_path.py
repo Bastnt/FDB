@@ -1,17 +1,20 @@
 #!/usr/local/bin/python
 
-from tree import Node, tree, Leaf
+from tree import Node, Attribute, Leaf
 
 class Edge :
-	def _init(self, leaf, cluster) :
-		sef.leaf = leaf
+	def __init__(self, node, cluster) :
+		self.node = node
 		self.cluster = cluster
 		
 	def __eq__(self, other) :
-		return (sef.leaf == sef.leaf) and (self.cluster == other.cluster)
+		return (sef.node == sef.node) and (self.cluster == other.cluster)
 		
 	def __hash__(self) :
-		return hash(sef.leaf) + hash(self.cluster)
+		return hash(sef.node) + hash(self.cluster)
+		
+	def __repr__(self) :
+		return repr((self.node, self.cluster))
 	
 
 def filter_edges_with_node(edge_list, node) :
@@ -23,10 +26,11 @@ def filter_edges_with_cluster(edge_list, cluster) :
 def build_edge_list_from_node(node) :
 	edge_list = []
 	for child in node.children :
-		if child isinstance Leaf :
+		if  isinstance(child, node) :
 			edge_list.extend(child.attributes)
 		else :
-			edge.list.extend(build_edge_list_from_node(child)
+			edge.list.extend(build_edge_list_from_node(child))
+			
 	return edge_list
 	
 	
@@ -50,7 +54,7 @@ def find_join_path(root, tree1, tree2) :
 		
 		for edge in edge_list_of_cluster :
 			if edge.node not in cluster_ancestor_of_node :
-				cluster_ancestor_of_node(edge.node) = cluster
+				cluster_ancestor_of_node[edge.node] = cluster
 				
 				node_list.append(edge.node)
 				
@@ -59,7 +63,7 @@ def find_join_path(root, tree1, tree2) :
 			
 			for edge in edge_list_of_node :
 				if edge.cluster not in node_ancestor_of_cluster :
-					node_ancestor_of_cluster(edge.cluster)
+					node_ancestor_of_cluster[edge.cluster] = edge.node
 					
 					cluster_list.append(edge.cluster)
 		
@@ -76,11 +80,12 @@ def find_join_path(root, tree1, tree2) :
 		
 		cluster_it = cluster_ancestor_of_node(node_it)
 		
-		if cluster_it = cluster_start
+		if cluster_it == cluster_start :
 			eureka = True
-		else
+		else :
 			join_cluster_list.append(cluster_it)
 		
 	return (join_cluster_list, join_node_list)
 		
-	
+edge_list = [Edge("A", "a"),Edge("A", "b"),Edge("B", "b"),Edge("B", "c"),Edge("C", "a")]
+print(filter_edges_with_cluster(edge_list, "a"))
