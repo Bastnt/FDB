@@ -19,7 +19,7 @@ def dealWithBasicElement(parsedString,table):
 	for i in xMLTables[table]:
 		match = re.search("("+i+")", parsedString)
 		if match:
-			return re.sub("("+i+")", "$x/\\1", parsedString)
+			return re.sub("("+i+")", "$x//\\1", parsedString)
 	# n-children
 	match = re.search("[\s]+(.+?)\/", parsedString)
 	if match:
@@ -43,6 +43,7 @@ def dealWithParenthesis(parsedString,table):
 
 # Converts the python Req into a valid XQuery request
 def fromPythonReqToXQuery(request):
+	re.sub("(.+?)s.xml$", "\\1", request.table)
 	header = "<"+request.table+"s>\n{"
 	footer = "}</"+request.table+"s>"
 

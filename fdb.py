@@ -4,13 +4,15 @@ from wrapper import xml_wrapper
 from models import *
 
 # This is the top
-#def execute(request):
+def execute(request):
 	# TODO
 	#if(not mediator.verifier.verify(request)):
 	#	return "Invalid Syntax"
 
 	#mediator.splitter.main(request)
-	#s = schema()
+	s = schema()
+	mediator.splitter.main("")
+
 
 	# Tests
 	#print(xml_wrapper.execute(Req(['name'], "", "moves.xml")))

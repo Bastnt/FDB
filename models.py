@@ -42,7 +42,7 @@ def schema():
 	Leaf(team, "trainerName", [sql_team])
 	Leaf(team, "victoryCounter", [sql_team])
 	Leaf(team, "defeatCounter", [sql_team])
-	Attribute(team, "@id", [sql_pokemon,xml_moves])
+	Attribute(team, "@id", [xml_team,sql_team])
 
 	pokemon = Node(team, "pokemon")
 	Leaf(pokemon, "nickname", [xml_team])
