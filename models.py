@@ -67,7 +67,7 @@ def schema():
 	Leaf(movePokemon, "description", [xml_moves])
 	Attribute(movePokemon, "@id", [xml_team, xml_moves])
 
-	move = Node(pokemon, "move")
+	move = Node(moves, "move")
 	Leaf(move, "spePhySta", [xml_team])
 	Leaf(move, "power", [xml_moves])
 	Leaf(move, "accuracy", [xml_moves])
@@ -79,8 +79,8 @@ def schema():
 	Leaf(pokemonPokedex, "name", [sql_pokemon])
 	Leaf(pokemonPokedex, "height", [sql_pokemon])
 	Leaf(pokemonPokedex, "weight", [sql_pokemon])
-	Leaf(pokemon, "type1", [xml_pokemon])
-	Leaf(pokemon, "type2", [xml_pokemon])
+	Leaf(pokemonPokedex, "type1", [xml_pokemon])
+	Leaf(pokemonPokedex, "type2", [xml_pokemon])
 	Leaf(pokemonPokedex, "base_experience", [sql_pokemon])
 	Attribute(pokemonPokedex, "@id", [sql_pokemon,xml_pokemon])
 	
