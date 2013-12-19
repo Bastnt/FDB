@@ -2,10 +2,15 @@ from tree import Node, Attribute, Leaf
 from wrapper import xml_wrapper, sql_wrapper
 
 class Req:
-	def __init__(self, projection = [], selection = "", table = ""):
+	def __init__(self, projection = "", selection = "", table = ""):
 		self.projection = projection
 		self.selection = selection
 		self.table = table
+
+class Condition:
+	def __init__(self, node, condition):
+		self.node = node
+		self.condition = condition
 
 class Cluster:
 	def __init__(self, origin, table, wrapper_execute_pointer):
@@ -42,7 +47,7 @@ def schema():
 	Leaf(team, "trainerName", [sql_team])
 	Leaf(team, "victoryCounter", [sql_team])
 	Leaf(team, "defeatCounter", [sql_team])
-	Attribute(team, "@id", [sql_pokemon,xml_moves])
+	Attribute(team, "@id", [xml_team,sql_team])
 
 	pokemon = Node(team, "pokemon")
 	Leaf(pokemon, "nickname", [xml_team])
@@ -62,7 +67,7 @@ def schema():
 	Leaf(movePokemon, "description", [xml_moves])
 	Attribute(movePokemon, "@id", [xml_team, xml_moves])
 
-	move = Node(pokemon, "move")
+	move = Node(moves, "move")
 	Leaf(move, "spePhySta", [xml_team])
 	Leaf(move, "power", [xml_moves])
 	Leaf(move, "accuracy", [xml_moves])
@@ -74,8 +79,8 @@ def schema():
 	Leaf(pokemonPokedex, "name", [sql_pokemon])
 	Leaf(pokemonPokedex, "height", [sql_pokemon])
 	Leaf(pokemonPokedex, "weight", [sql_pokemon])
-	Leaf(pokemon, "type1", [xml_pokemon])
-	Leaf(pokemon, "type2", [xml_pokemon])
+	Leaf(pokemonPokedex, "type1", [xml_pokemon])
+	Leaf(pokemonPokedex, "type2", [xml_pokemon])
 	Leaf(pokemonPokedex, "base_experience", [sql_pokemon])
 	Attribute(pokemonPokedex, "@id", [sql_pokemon,xml_pokemon])
 	

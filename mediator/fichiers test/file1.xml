@@ -1,10 +1,6 @@
-<CATALOG>
-	<CD>
-		<TITLE>Sylvias Mother</TITLE>
-		<ARTIST>Dr.Hook</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>CBS</COMPANY>
-		<PRICE>8.10</PRICE>
-		<YEAR>1973</YEAR>
-	</CD>
-</CATALOG>
+<root>
+  <element1>textA</element1>
+  <elements>
+    <nested1>text now</nested1>
+  </elements>
+</root>

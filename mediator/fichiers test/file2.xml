@@ -1,10 +1,7 @@
-<CATALOG>
-	<CD>
-		<TITLE>Empire Burlesque</TITLE>
-		<ARTIST>Bob Dylan</ARTIST>
-		<COUNTRY>USA</COUNTRY>
-		<COMPANY>Columbia</COMPANY>
-		<PRICE>10.90</PRICE>
-		<YEAR>1985</YEAR>
-	</CD>
-</CATALOG>
+<root>
+  <element2>textB</element2>
+  <elements>
+    <nested1>text after</nested1>
+    <nested2>new text</nested2>
+  </elements>
+</root>
