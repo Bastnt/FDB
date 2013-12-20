@@ -7,4 +7,4 @@ xquery_processor = "zorba/bin/zorba.exe"
 def execute(req):
 	proc = subprocess.Popen([xquery_processor, "-q", req], stdout=subprocess.PIPE)
 	out, err = proc.communicate()
-	return re.sub("\\\.", "", str(out))
+	return re.sub("\\\.", "", out.decode("utf8"))
