@@ -26,11 +26,12 @@ def filter_edges_with_cluster(edge_list, cluster) :
 def build_edge_list_from_node(node) :
 	edge_list = []
 	for child in node.children :
-		if  isinstance(child, node) :
-			edge_list.extend(child.attributes)
-		else :
-			edge.list.extend(build_edge_list_from_node(child))
-			
+		if    isinstance(child, Attribute) :
+			for cluster in child.wrappers :
+				edge_list.append(Edge(child.name, cluster))
+		elif  isinstance(child, Node) :
+			edge_list.extend(build_edge_list_from_node(child))
+		
 	return edge_list
 	
 def update_cluster_path(cluster, edge_list_of_cluster, node_list, cluster_ancestor_of_node) :
@@ -117,3 +118,5 @@ def find_join_path(root, tree1, tree2) :
 # (join_cluster_list, join_node_list) = build_join_lists(cluster_start, cluster_end, node_ancestor_of_cluster, cluster_ancestor_of_node)
 # print(join_cluster_list)
 # print(join_node_list)
+
+#edge_list = build_edge_list_from_node(pokemonPokedex)
