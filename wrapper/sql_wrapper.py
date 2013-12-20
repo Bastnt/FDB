@@ -22,13 +22,7 @@ db_path = "data/sql/database.db"
 
 # Converts the python Req into a valid SQL request
 def fromPythonReqToSQL(request):
-	# Selected columns from the table
-	# --------------------------------------------------------
-	selectedColumns = ""
-	for i in request.projection:
-		selectedColumns += i+", "
-
-	return "SELECT "+selectedColumns[:-2]+" FROM "+request.table+" WHERE "+request.selection+";";
+	return "SELECT "+request.projection+" FROM "+request.table+" WHERE "+request.selection+";";
 
 # Performs the SQL request on the database
 def getSQLResult(sqlQuery, db_path):
@@ -73,8 +67,10 @@ def fromSQLAnswerToXML(answer, request):
 
 	for tupleAnswer in answer:
 		child = ET.SubElement(root, request.table)
-		for i in range(0, len(request.projection)):
-			att = ET.SubElement(child, request.projection[i])
+			if(request.projection=="id")
+				att= ET.Attribute(child, "id")
+			else:
+				att = ET.SubElement(child, request.projection)
 			att.text = str(tupleAnswer[i])
 
 	# Write XML tree to output file
