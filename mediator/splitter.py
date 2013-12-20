@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
 from models import *
+from decision_algorithm import *
 
 # PROJET BDA SIM
 # Dans ce fichier sera codé le diviseur :
@@ -93,6 +94,3 @@ def parse(mask, string):
 	found = re.search(mask, string)
 	assert found != None, ("Error while parsing:\n"+string)
 	return found.group(1)
-
-if __name__ == "__main__":
-	main()
