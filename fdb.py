@@ -26,8 +26,6 @@ def execute(request):
 
 	# splitter.main(simplified_request)
 
-
-
 	# Tests
 	#print(xml_wrapper.execute(Req("type55", "", "moves")))
 
