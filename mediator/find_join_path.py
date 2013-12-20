@@ -26,7 +26,7 @@ def filter_edges_with_cluster(edge_list, cluster) :
 def build_edge_list_from_node(node) :
 	edge_list = []
 	for child in node.children :
-		if    isinstance(child, Attribute) :
+		if isinstance(child, Attribute) :
 			for cluster in child.wrappers :
 				edge_list.append(Edge(child.name, cluster))
 		elif  isinstance(child, Node) :
