@@ -67,11 +67,11 @@ def fromSQLAnswerToXML(answer, request):
 
 	for tupleAnswer in answer:
 		child = ET.SubElement(root, request.table)
-			if(request.projection=="id")
-				att= ET.Attribute(child, "id")
-			else:
-				att = ET.SubElement(child, request.projection)
-			att.text = str(tupleAnswer[i])
+		if(request.projection=="id"):
+			child.set("id", str(tupleAnswer[0]))
+		else:
+			att = ET.SubElement(child, request.projection)
+			att.text = str(tupleAnswer[0])
 
 	# Write XML tree to output file
 	# --------------------------------------------------------
