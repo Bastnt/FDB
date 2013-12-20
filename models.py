@@ -22,6 +22,12 @@ class Cluster:
 		req.table = self.table
 		self.executer(req)
 
+sql_pokemon = Cluster("sql", "pokemon", sql_wrapper.execute)
+sql_team = Cluster("sql", "team", sql_wrapper.execute)
+xml_moves = Cluster("xml", "moves", xml_wrapper.execute)
+xml_team = Cluster("xml", "teams", xml_wrapper.execute)
+xml_pokemon = Cluster("xml", "pokemons", xml_wrapper.execute)
+
 def schema():
 	# === XML example verified by this schema: ===
 	# <Node:pokemonData>
@@ -31,12 +37,6 @@ def schema():
 	#		</Node:team>
 	# 	</Node:teams>
 	# </Node:pokemonData>
-
-	sql_pokemon = Cluster("sql", "pokemon", sql_wrapper.execute)
-	sql_team = Cluster("sql", "team", sql_wrapper.execute)
-	xml_moves = Cluster("xml", "moves", xml_wrapper.execute)
-	xml_team = Cluster("xml", "teams", xml_wrapper.execute)
-	xml_pokemon = Cluster("xml", "pokemons", xml_wrapper.execute)
 
 	root = Node(None, "pokemonData")
 	teams = Node(root, "teams")

@@ -1,17 +1,17 @@
 #!/usr/local/bin/python
 
-from tree import Node, tree, Leaf
+from tree import Node, Tree, Leaf
 
 class Edge :
 	def _init(self, leaf, cluster) :
-		sef.leaf = leaf
+		self.leaf = leaf
 		self.cluster = cluster
 		
 	def __eq__(self, other) :
-		return (sef.leaf == sef.leaf) and (self.cluster == other.cluster)
+		return (self.leaf == self.leaf) and (self.cluster == other.cluster)
 		
 	def __hash__(self) :
-		return hash(sef.leaf) + hash(self.cluster)
+		return hash(self.leaf) + hash(self.cluster)
 	
 
 def filter_edges_with_node(edge_list, node) :

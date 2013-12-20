@@ -32,7 +32,6 @@ def getSQLResult(sqlQuery, db_path):
 		# Connect to the database.db
 		# --------------------------------------------------------
 	    connection = lite.connect(db_path)
-	    print('Successfully connected to \"%s\"' % db_path)
 	    cursor = connection.cursor()
 
 		# Execute SQL query
@@ -76,7 +75,6 @@ def fromSQLAnswerToXML(answer, request):
 	# Write XML tree to output file
 	# --------------------------------------------------------
 	string = ET.tostring(root)
-	string = str(string, "utf-8")
 	return string
 
 def execute(request):

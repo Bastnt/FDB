@@ -64,8 +64,8 @@ def fromPythonReqToXQuery(request):
 		returnPart = " return <"+request.table[:-1]+" id=\"{$x/@id}\">\n\t{$x/"+request.projection+"}\n</"+request.table[:-1]+">\n"
 	else:
 		returnPart = " return <"+request.table[:-1]+" id=\"{$x/@id}\"/>\n"
-	print(header+forPart+wherePart+returnPart+footer)
-	return header+forPart+wherePart+returnPart+footer;
+
+	return header+forPart+wherePart+returnPart+footer
 
 def execute(request):
 	return xquery.execute(fromPythonReqToXQuery(request))

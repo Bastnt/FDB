@@ -2,6 +2,7 @@
 import re
 from models import *
 from decision_algorithm import *
+import xml.etree.cElementTree as ET
 
 # PROJET BDA SIM
 # Dans ce fichier sera codé le diviseur :
@@ -31,17 +32,41 @@ def main(simplified_request):
 		return empty_result()
 
 		# Here are the results of the complete parsing
-	print("\nreturn: "+returnNode.name)
-	print("condition: "+str(conditionList))
+	print("\nreturnObject: "+returnNode.name)
+	print("conditions: ")
+	for c in conditionList:
+		if c != None:
+			print("Condition("+c.node.name+c.condition+")")
 
 
 	# We now call the decision algorithm
 	print("\nJoins: ")
+	print(returnNode.name)
 	for c in conditionList:
-		print(join_decision(returnNode, c.node))
+		clusters, join_attribute = join_decision(c.node, returnNode)
+		cond = c.node.name + c.condition
+		for i in range(0,len(clusters)-1):
+			print(clusters[i].origin)
+			if clusters[i].origin == "sql":
+				res = clusters[i].executer(Req(join_attribute[i], cond, clusters[i].table))
+				tree = ET.fromstring(res)
+				res = []
+				for c in tree.getchildren():
+					res.append("@"+join_attribute[i]+" = \""+c.attrib[join_attribute[i]]+"\"")
+				cond=" or ".join(res)
 
-def join_decision(node1, node2):
-	return node1.name + " --> " + node2.name
+			elif clusters[i].origin == "xml":
+				res = clusters[i].executer(Req(join_attribute[i], cond, clusters[i].table))
+				tree = ET.fromstring(res)
+				res = []
+				for c in tree.getchildren():
+					res.append("@"+join_attribute[i]+" = \""+c.attrib[join_attribute[i]]+"\"")
+				cond=" or ".join(res)
+				print(cond)
+
+		return clusters[-1].executer(Req(returnNode.name, cond, clusters[-1].table))
+
+
 
 def parse_xpath(cursor, expression):
 	# The conditions to apply
@@ -62,7 +87,7 @@ def parse_xpath(cursor, expression):
 			exit()
 
 		if type == "[":
-			c = re.search("^([\w@\.]+)(.+)$", name)
+			c = re.search("^([/?\w@\.]+)(.+)$", name)
 			n, _ = parse_xpath(cursor, c.group(1))
 			conditions.append(Condition(n, c.group(2)))
 
