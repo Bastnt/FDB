@@ -75,10 +75,10 @@ def build_join_lists(cluster_start, cluster_end, node_ancestor_of_cluster, clust
 def find_join_path(root, tree1, tree2) :
 	edge_list = build_edge_list_from_node(root)
 	
-	cluster_start = tree1.attributes[0]
-	cluster_end   = tree2.attributes[0]
+	cluster_start = tree1.wrappers[0]
+	cluster_end   = tree2.wrappers[0]
 	
-	cluster_list  = cluster_start
+	cluster_list  = [cluster_start]
 	node_list     = []
 	
 	cluster_ancestor_of_node = dict() # node -> cluster
